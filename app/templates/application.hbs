@@ -1,5 +1,49 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div id="topbar">
+  <div id="topbar-inner">
+    <nav class="sites dropdown">
+      <h1>
+        {{#link-to "index" class="trigger"}}5apps{{/link-to}}
+      </h1>
+      <ul>
+        <li>
+          <a href="https://{{baseDomain}}/deploy/home"><h2>Deploy</h2>
+            <p>Deployment and hosting for static apps</p>
+          </a>
+        </li>
+        <li class="current">
+          <a href="https://{{baseDomain}}/storage/beta"><h2>Storage</h2>
+            <p>Cloud storage for unhosted apps</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://{{baseDomain}}/news"><h2>News</h2>
+            <p>Social news site for HTML5, JS &amp; friends</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section id="account">
+      <ul>
+        <li class="help">
+          <a href="https://5apps.tenderapp.com"><i class="icon-lifebuoy"></i>
+            Help
+          </a>
+        </li>
+        {{#if session.isAuthenticated}}
+          <li class="logout">
+            <a href="#" rel="nofollow" {{action "invalidateSession"}}>Log out</a>
+          </li>
+        {{else}}
+          <li class="login">
+            {{#link-to "login"}}Log in{{/link-to}}
+          </li>
+          <li class="signup">
+            <a href="https://{{baseDomain}}/users/sign_up?site=storage">Sign up</a>
+          </li>
+        {{/if}}
+      </ul>
+    </section>
+  </div>
+</div>
 
 {{outlet}}

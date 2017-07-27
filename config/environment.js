@@ -21,7 +21,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    baseDomain: '5apps.dev',
+    apiHost: 'https://develop.5apps.dev'
   };
 
   if (environment === 'development') {
@@ -44,7 +47,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseDomain = '5apps.com';
+    ENV.apiHost = 'https://api.5apps.com';
   }
 
   return ENV;
