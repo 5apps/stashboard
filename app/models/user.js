@@ -10,7 +10,11 @@ export default Model.extend({
   email: attr(),
   avatarUrl: attr(),
   roles: attr('array'),
-  sites: attr('array')
+  sites: attr('array'),
+  storageAddress: attr(),
+  storageSize: attr(),
+  storageSizeInPercent: attr(),
+  maximumStorageSize: attr()
 
 });
 
