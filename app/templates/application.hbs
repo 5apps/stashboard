@@ -30,6 +30,13 @@
           </a>
         </li>
         {{#if session.isAuthenticated}}
+          {{#if currentUser.user}}
+            <li class="account">
+              <a href="/account/settings" style={{avatarStyle}}>
+                {{currentUser.user.username}}
+              </a>
+            </li>
+          {{/if}}
           <li class="logout">
             <a href="#" rel="nofollow" {{action "invalidateSession"}}>Log out</a>
           </li>
