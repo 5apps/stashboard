@@ -65,7 +65,7 @@
         <div class="limits">
           <a class="small button" href="https://{{baseDomain}}/storage/plans">Change plan</a>
           <div class="limit size">
-            <div class="progress_indicator"><div class="progress info" style="width: 1%"></div></div>
+            {{storage-size-progress percent=currentUser.user.storageSizeInPercent}}
             <p>
               <strong>Usage</strong>
               <span class="numbers">
