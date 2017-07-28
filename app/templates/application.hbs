@@ -53,4 +53,58 @@
   </div>
 </div>
 
-{{outlet}}
+<div class="container">
+
+  <section class="storage_header">
+    <div class="container">
+      <h1>
+        Storage
+        <span class="beta">Beta</span>
+      </h1>
+      <div class="plan">
+        <div class="limits">
+          <a class="small button" href="https://{{baseDomain}}/storage/plans">Change plan</a>
+          <div class="limit size">
+            <div class="progress_indicator"><div class="progress info" style="width: 1%"></div></div>
+            <p>
+            <strong>Usage</strong>
+            <span class="numbers">
+              <span class="used">0 Bytes</span>
+              <span class="available">
+                of 1 GB
+              </span>
+            </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="main">
+    {{outlet}}
+  </section>
+
+  <footer>
+    <p class="info">
+      <a href="https://{{baseDomain}}/multipass?to=https%3A%2F%2F5apps.tenderapp.com">Help</a>
+      <span class="divider">·</span>
+      <a href="https://{{baseDomain}}/about">About</a>
+      <span class="divider">·</span>
+      <a href="https://blog.5apps.com">Blog</a>
+      <span class="divider">·</span>
+      <a href="http://status.5apps.com">Status</a>
+      <span class="divider">·</span>
+      <a href="mailto:mail@5apps.com">Contact</a>
+      <span class="divider">·</span>
+      <a href="https://twitter.com/5apps">Twitter</a>
+    </p>
+    <p class="legal">
+      © Appcache Ltd. All rights reserved.
+      <span class="divider">·</span>
+      <a href="https://{{baseDomain}}/privacy">Privacy Policy</a>
+      <span class="divider">·</span>
+      <a href="https://{{baseDomain}}/terms">Terms of Service</a>
+    </p>
+  </footer>
+</div>
