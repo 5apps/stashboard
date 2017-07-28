@@ -20,15 +20,15 @@
         </p>
         <p class="metadata discreet">
           Approved
-          <span data-time={{auth.createdAt}}>
-            {{auth.createdAt}}
-          </span>
+          <time datetime={{auth.createdAtDatetime}} title={{auth.createdAtDateTitle}}>
+            {{moment-from-now auth.createdAt}}
+          </time>
           {{#if auth.expireAt}}
             &middot;
-            Expires in
-            <span data-time={{auth.expireAt}}>
-              {{auth.expireAt}}
-            </span>
+            Expires
+            <time datetime={{auth.expireAtDatetime}} title={{auth.expireAtDateTitle}}>
+              {{moment-from-now auth.expireAt}}
+            </time>
           {{/if}}
         </p>
       </div>
