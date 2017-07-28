@@ -10,6 +10,16 @@ export default Controller.extend({
     return this.get('model.length');
   }),
 
+  categoriesCount: computed('model.@each.permissions', function() {
+    const permissions = this.get('model').map((auth) => {
+      return auth.get('permissions').map((permission) => {
+        return permission.split(':')[0];
+      });
+    });
+
+    return [].concat(...permissions).uniq().length;
+  }),
+
   actions: {
     revokeAccess(auth) {
       auth.destroyRecord();
