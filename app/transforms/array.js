@@ -6,7 +6,6 @@ const { isArray, A } = Ember;
 export default DS.Transform.extend({
 
   deserialize(serialized) {
-    return serialized;
     if (isArray(serialized)) {
 			return A(serialized);
 		} else {
