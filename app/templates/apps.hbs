@@ -16,9 +16,7 @@
         </h4>
         <p class="permissions">
           Access:
-          {{#each auth.permissions as |permission|}}
-            <span class="permission">{{permission}}</span>
-          {{/each}}
+          {{storage-permissions permissions=auth.permissions}}
         </p>
         <p class="metadata discreet">
           Approved
