@@ -271,10 +271,8 @@ table {
   display: block;
   height: 24px;
   width: 93px;
-  background: url("/assets/topbar/logo-sprite-ribbon.png") no-repeat;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 93px 48px;
+  background-image: url("/assets/topbar/logo-sprite-ribbon.svg");
+  background-size: auto 48px;
   color: white;
 }
 /* line 130, /var/www/platform/app/assets/stylesheets/basics/_topbar.sass */
@@ -288,12 +286,6 @@ table {
 /* line 135, /var/www/platform/app/assets/stylesheets/basics/_topbar.sass */
 #topbar nav.dropdown.open h1 a {
   background-position: 0 -24px;
-}
-
-/* line 138, /var/www/platform/app/assets/stylesheets/basics/_topbar.sass */
-html.svg #topbar nav.sites h1 a {
-  background-image: url("/assets/topbar/logo-sprite-ribbon.svg");
-  background-size: auto 48px;
 }
 
 @media screen and (max-width: 960px) {
@@ -2394,25 +2386,25 @@ ul.error_messages li {
 }
 
 /* line 120, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch span.saved {
+form .switch span.saved {
   font-size: 12px;
   color: green;
   padding-right: 5px;
   display: none;
 }
 /* line 125, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch input[type=checkbox] {
+form .switch input[type=checkbox] {
   display: none;
 }
 /* line 127, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch a {
+form .switch a {
   text-decoration: none;
   color: #888;
   border: 1px solid #ddd;
   padding: 5px 8px;
 }
 /* line 132, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch a.on {
+form .switch a.on {
   -moz-border-radius-topleft: 5px;
   -webkit-border-top-left-radius: 5px;
   border-top-left-radius: 5px;
@@ -2421,7 +2413,7 @@ ul.error_messages li {
   border-bottom-left-radius: 5px;
 }
 /* line 134, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch a.off {
+form .switch a.off {
   border-left: none;
   background-color: #ececec;
   -moz-border-radius-topright: 5px;
@@ -2439,16 +2431,16 @@ ul.error_messages li {
   text-shadow: 1px 1px 0 #fff;
 }
 /* line 140, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch a.off:hover {
+form .switch a.off:hover {
   color: #888;
 }
 /* line 142, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch a:hover {
+form .switch a:hover {
   background-color: #fff;
   color: #333;
 }
 /* line 146, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch.on a.on {
+form .switch.on a.on {
   color: #fff;
   background-color: #35B530;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVmZGM1YiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1YjUzMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -2462,16 +2454,16 @@ ul.error_messages li {
   border-bottom-color: #2FA12B;
 }
 /* line 153, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch.on a.off {
+form .switch.on a.off {
   background-color: #fff;
   background-image: none;
 }
 /* line 156, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch.on a.off:hover {
+form .switch.on a.off:hover {
   color: #333;
 }
 /* line 160, /var/www/platform/app/assets/stylesheets/basics/_forms.sass */
-.js form .switch.default.on a.on {
+form .switch.default.on a.on {
   color: #fff;
   background-color: #aaa;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2FhYWFhYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzg4ODg4OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
