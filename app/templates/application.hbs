@@ -61,23 +61,25 @@
         Storage
         <span class="beta">Beta</span>
       </h1>
-      <div class="plan">
-        <div class="limits">
-          <a class="small button" href="https://{{baseDomain}}/storage/plans">Change plan</a>
-          <div class="limit size">
-            {{storage-size-progress percent=currentUser.user.storageSizeInPercent}}
-            <p>
-              <strong>Usage</strong>
-              <span class="numbers">
-                <span class="used">{{number-to-human-size currentUser.user.storageSize}}</span>
-                <span class="available">
-                  of {{number-to-human-size currentUser.user.maximumStorageSize}}
+      {{#if session.isAuthenticated}}
+        <div class="plan">
+          <div class="limits">
+            <a class="small button" href="https://{{baseDomain}}/storage/plans">Change plan</a>
+            <div class="limit size">
+              {{storage-size-progress percent=currentUser.user.storageSizeInPercent}}
+              <p>
+                <strong>Usage</strong>
+                <span class="numbers">
+                  <span class="used">{{number-to-human-size currentUser.user.storageSize}}</span>
+                  <span class="available">
+                    of {{number-to-human-size currentUser.user.maximumStorageSize}}
+                  </span>
                 </span>
-              </span>
-            </p>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      {{/if}}
     </div>
   </section>
 
