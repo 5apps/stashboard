@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('login');
   this.route('apps');
   this.route('callback');
+  this.route('welcome');
 
 });
 

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-const { Route, inject: { service }, isEmpty } = Ember;
+const { Route, inject: { service }, isPresent } = Ember;
 
 export default Route.extend(AuthenticatedRouteMixin, {
 
@@ -12,9 +12,10 @@ export default Route.extend(AuthenticatedRouteMixin, {
   },
 
   afterModel(model) {
-    if (isEmpty(model)) {
-      this.transitionTo('welcome');
+    if (isPresent(model)) {
+      this.transitionTo('apps');
     }
   }
 
 });
+
