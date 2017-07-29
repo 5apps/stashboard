@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { Controller, inject: { service }, computed, isEmpty } = Ember;
+const { Controller, inject: { service }, computed, isEmpty, $ } = Ember;
 
 export default Controller.extend({
 
@@ -22,6 +22,8 @@ export default Controller.extend({
 
   actions: {
     revokeAccess(auth) {
+      $(`.auth[data-id=${auth.get('id')}]`).fadeOut();
+
       auth.destroyRecord().then(() => {
         if (isEmpty(this.get('model'))) {
           this.transitionToRoute('welcome');
