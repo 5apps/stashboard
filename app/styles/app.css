@@ -5688,7 +5688,7 @@ body.storage .authorizations .auth .app p:last-child {
   margin: 0;
 }
 
-body.storage .authorizations .auth .app p.metadata span {
+body.storage .authorizations .auth .app p.metadata time {
   border-bottom: 1px dotted #ccc;
 }
 
