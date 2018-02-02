@@ -1,36 +1,25 @@
-<section id="apps">
-  <div id="getting-started">
-    <h3>
-      Welcome to 5apps Storage!
-    </h3>
-
-    <p class="intro">
-      You haven't authorized any apps to access your 5apps storage yet.
+<section class="content" id="welcome">
+  <div class="intro">
+    <h2>Welcome!</h2>
+    <p class="text-large">
+      You have not allowed any apps to access your storage account yet.
     </p>
-
-    <h4>Getting started</h4>
-
-    <p>
-      Look for the remoteStorage widget in apps. Click it and enter your
-      user address in order to connect your storage account:
-    </p>
-
-    {{widget-demo}}
-
     <p>
       Your user address for this account is:
-      <strong>{{currentUser.user.storageAddress}}</strong>
-    </p>
-
-    <p>
-      When first connecting an app, you will be redirected to 5apps, where
-      you can grant it access to your storage.
-    </p>
-
-    <p>
-      All connected apps will appear on this page, where you can revoke
-      access, if you no longer wish to use the app.
+      <span class="user-address">basti@5apps.com</span>
     </p>
   </div>
+  <div class="info blurb">
+    <div class="icon">
+      {{partial "icons/info-circle"}}
+    </div>
+    <div class="text">
+      <p>
+        When connecting your storage to an app, you will be redirected to 5apps,
+        where you can see the requested permissions and allow or not allow
+        access. Connected apps will appear here, on your 5apps Storage dashboard,
+        where you can revoke access for any app at any time.
+      </p>
+    </div>
+  </div>
 </section>
-

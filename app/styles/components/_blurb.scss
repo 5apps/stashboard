@@ -1,0 +1,48 @@
+.blurb {
+  @include contentBox;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    flex: 0;
+    @include padding(null 2rem);
+
+    svg {
+      width: 3rem;
+    }
+  }
+
+  .text {
+    flex: 1;
+    padding: 1.2rem 2rem;
+    text-align: left;
+    border-left: 1px solid $lightBodyContentBoxBorder;
+  }
+
+  &.info {
+    .icon {
+      svg {
+        path {
+          fill: $shadedShinyBlue;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blurb {
+    flex-direction: column;
+
+    .icon {
+      @include padding(1rem null);
+    }
+
+    .text {
+      border-left: none;
+      border-top: 1px solid $lightBodyContentBoxBorder;
+    }
+  }
+}

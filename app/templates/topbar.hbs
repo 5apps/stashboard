@@ -1,0 +1,30 @@
+<header class="navbar-top">
+  <h1>
+    <img src="/assets/brand/icon-gradient-blue.svg" alt="">
+    5apps
+    <span class="secondary">Storage</span>
+  </h1>
+  <nav>
+    <ul>
+      {{#if session.isAuthenticated}}
+        {{#if currentUser.user}}
+          <li class="account">
+            <a href="/account/settings" style={{avatarStyle}}>
+              {{currentUser.user.username}}
+            </a>
+          </li>
+        {{/if}}
+        <li class="logout">
+          <a href="#" rel="nofollow" {{action "invalidateSession"}}>log out</a>
+        </li>
+      {{else}}
+        <li class="login">
+          {{#link-to "login"}}log in{{/link-to}}
+        </li>
+        <li class="signup">
+          <a href="https://{{baseDomain}}/users/sign_up?site=storage">sign up</a>
+        </li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,28 @@
+$darkGrey: #344453;
+$darkerGrey: darken($darkGrey, 5%);
+$greyTextOnDarkGrey: lighten($darkGrey, 50%);
+
+$shinyBlue: #6bf;
+$shadedShinyBlue: darken(shade($shinyBlue, 15%), 8%);
+$lightBlue: tint($shinyBlue, 90%);
+
+// $rubyRed: #900;
+$rubyRed: #bf0202;
+
+$shinyPurple: #c466ff;
+$shadedShinyPurple: darken(shade($shinyPurple, 15%), 8%);
+
+// $lightGrey: lighten($darkGrey, 69%);
+// $darkBlue: #203248;
+
+$bodyTextColor: #192027;
+
+// Colors on dark background
+$darkBodyRed: #f66;
+$darkBodyYellow: #edff66;
+$darkBodyGreen: #b7ff66;
+$darkBodyBlue: $shinyBlue;
+$darkBodyPurple: $shinyPurple;
+
+$lightBodyBackground: #f3f6f9;
+$lightBodyContentBoxBorder: darken($lightBodyBackground, 5%);

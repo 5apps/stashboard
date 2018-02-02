@@ -1,0 +1,16 @@
+<div class="plan">
+  <div class="limits">
+    <div class="limit size">
+      {{storage-size-progress percent=currentUser.user.storageSizeInPercent}}
+      <p>
+      <strong>Usage</strong>
+      <span class="numbers">
+        <span class="used">{{number-to-human-size currentUser.user.storageSize}}</span>
+        <span class="available">
+          of {{number-to-human-size currentUser.user.maximumStorageSize}}
+        </span>
+      </span>
+      </p>
+    </div>
+  </div>
+</div>

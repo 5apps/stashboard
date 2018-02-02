@@ -1,0 +1,11 @@
+section#welcome {
+  flex: 1;
+  max-width: 960px;
+  text-align: center;
+
+  span.user-address {
+    display: inline-block;
+    margin-left: 0.8rem;
+    font-weight: bold;
+  }
+}

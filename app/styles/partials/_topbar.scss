@@ -1,0 +1,72 @@
+header.navbar-top {
+  height: 60px;
+  line-height: 60px;
+  background-color: $darkGrey;
+  // background-image: linear-gradient(-90deg, $darkBlue 0%, #322953 100%);
+
+  h1 {
+    display: inline-block;
+    line-height: inherit;
+    padding: 0 1rem;
+    color: #fff;
+    @include headlineFont(uppercase);
+
+    span.secondary {
+      color: $greyTextOnDarkGrey
+    }
+
+    img {
+      width: 36px;
+      height: auto;
+      margin-right: 0.4rem;
+      margin-top: 11px;
+      vertical-align: top;
+    }
+  }
+
+  nav {
+    display: block;
+    float: right;
+    width: auto;
+    font-size: 14px;
+
+    ul {
+      li {
+        display: inline;
+
+        a {
+          display: inline-block;
+          padding: 0 1rem;
+          text-decoration: none;
+          color: $greyTextOnDarkGrey;
+          transition: color 0.1s linear;
+          &:hover, &:active {
+            color: $shinyBlue;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  header.topbar {
+    h1 {
+      .secondary {
+        display: none;
+      }
+    }
+    nav {
+      ul {
+        li {
+          a {
+            padding: 0 0.5rem;
+          }
+          &:last-of-type a {
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
