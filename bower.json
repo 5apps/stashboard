@@ -1,0 +1,7 @@
+{
+  "name": "hyperchannel",
+  "dependencies": {
+    "bourbon": "^4.2.7"
+  }
+}
+
