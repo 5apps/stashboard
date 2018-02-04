@@ -1,72 +1,39 @@
-<section id="apps">
-  <div id="authorizations">
-    <h3>Apps</h3>
-
-    <p>
-      These are all apps that can access your 5apps storage:
-    </p>
-
-    <div class="authorizations">
-      {{#each model as |auth|}}
-        <div class="auth" data-id={{auth.id}}>
-          <div class="icon">
-            <img src={{auth.iconUrl}}>
-          </div>
-          <div class="app">
-            <h4>
-              <a href="{{auth.launchUrl}}" class="app_url" target="_blank">{{auth.appName}}</a>
-            </h4>
-            <p class="permissions">
-              Access:
-              {{storage-permissions permissions=auth.permissions}}
-            </p>
-            <p class="metadata discreet">
-              Approved
-              <time datetime={{auth.createdAtDatetime}} title={{auth.createdAtDateTitle}}>
-                {{moment-from-now auth.createdAt}}
-              </time>
-              {{#if auth.expireAt}}
-                &middot;
-                Expires
-                <time datetime={{auth.expireAtDatetime}} title={{auth.expireAtDateTitle}}>
-                  {{moment-from-now auth.expireAt}}
-                </time>
-              {{/if}}
-            </p>
-          </div>
-          <div class="actions">
-            <a href="" {{action "revokeAccess" auth}} class="danger button">Revoke access</a>
-          </div>
+<section class="content" id="apps">
+  <header>
+    <h2>Connected Apps</h2>
+  </header>
+  <div class="authorizations">
+    {{#each model as |auth|}}
+      <div class="auth" data-id={{auth.id}}>
+        <div class="icon">
+          <img src={{auth.iconUrl}}>
         </div>
-      {{/each}}
-    </div>
+        <div class="details">
+          <h4>
+            <a href="{{auth.launchUrl}}" class="app_url" target="_blank">{{auth.appName}}</a>
+          </h4>
+          <p class="permissions">
+            Access:
+            {{storage-permissions permissions=auth.permissions}}
+          </p>
+          <p class="metadata discreet">
+            Approved
+            <time datetime={{auth.createdAtDatetime}} title={{auth.createdAtDateTitle}}>
+              {{moment-from-now auth.createdAt}}
+            </time>
+            {{#if auth.expireAt}}
+              &middot;
+              Expires
+              <time datetime={{auth.expireAtDatetime}} title={{auth.expireAtDateTitle}}>
+                {{moment-from-now auth.expireAt}}
+              </time>
+            {{/if}}
+          </p>
+        </div>
+        <div class="actions">
+          <a href="" {{action "revokeAccess" auth}} class="danger button">Revoke access</a>
+        </div>
+      </div>
+    {{/each}}
   </div>
-
-  <aside>
-    <section>
-      <p>
-        Your username for connecting apps to your storage is:
-      </p>
-      <p>
-        <span class="username">
-          {{currentUser.user.storageAddress}}
-        </span>
-      </p>
-    </section>
-    <section>
-      <p>
-        Currently, <strong>{{pluralize-word appsCount "app"}}</strong> have
-        access to <strong>{{pluralize-word categoriesCount "category"}}</strong>
-        on your storage.
-      </p>
-    </section>
-    <section>
-      <p>
-        Need some help with remoteStorage?
-        <a target="_blank" href="https://5apps.dev/multipass?to=https%3A%2F%2F5apps.tenderapp.com">Visit our help site</a>
-        or check out the official
-        <a target="_blank" href="https://community.remotestorage.io/c/getting-started">community forums</a>.
-      </p>
-    </section>
-  </aside>
 </section>

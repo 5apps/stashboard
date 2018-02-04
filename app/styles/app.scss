@@ -18,39 +18,43 @@ body {
   font-size: 16px;
 }
 
+h1, h2, h3, h4 {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  @include headlineFont(uppercase);
+  font-size: 2.2rem;
+  color: $shadedShinyBlue;
+}
+
+p {
+  line-height: 1.6em;
+  margin-bottom: 2rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &.text-large {
+    font-size: 1.2rem;
+  }
+}
+
 #container-main {
   padding: 6rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  h1, h2, h3, h4 {
-    margin-bottom: 3rem;
-  }
+section.content {
+  flex: 1;
+  max-width: 960px;
+  text-align: center;
 
-  h2 {
-    @include headlineFont(uppercase);
-    font-size: 2.2rem;
-    color: $shadedShinyBlue;
-  }
-
-  p {
-    line-height: 1.6em;
-    margin-bottom: 2rem;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-
-    &.text-large {
-      font-size: 1.2rem;
-    }
-  }
-
-  div.intro {
-    margin-bottom: 3rem;
-  }
 }
 
 @import "components/blurb";
 @import "views/welcome";
+@import "views/apps";

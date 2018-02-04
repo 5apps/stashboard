@@ -1,7 +1,7 @@
 section#welcome {
-  flex: 1;
-  max-width: 960px;
-  text-align: center;
+  header {
+    margin-bottom: 3rem;
+  }
 
   span.user-address {
     display: inline-block;
