@@ -6,24 +6,22 @@
     {{#each model as |auth|}}
       <div class="auth" data-id={{auth.id}}>
         <div class="icon">
-          <img src={{auth.iconUrl}}>
         </div>
-        <div class="details">
+        <div class="app-name">
           <h4>
-            <a href="{{auth.launchUrl}}" class="app_url" target="_blank">{{auth.appName}}</a>
+            Sharesome
           </h4>
-          <p class="permissions">
-            Access:
+          <p>
+            <a href="{{auth.launchUrl}}" class="app_url" target="_blank">{{auth.appName}}</a>
+          </p>
+        </div>
+        <div class="metadata">
+          <p>
             {{storage-permissions permissions=auth.permissions}}
           </p>
-          <p class="metadata discreet">
+          <p class="created-at">
             Approved
-            <time datetime={{auth.createdAtDatetime}} title={{auth.createdAtDateTitle}}>
-              {{moment-from-now auth.createdAt}}
-            </time>
-            {{#if auth.expireAt}}
-              &middot;
-              Expires
+            <time datetime={{auth.createdAtDatetime}} title={{auth.createdAtDateTitle}}>{{moment-from-now auth.createdAt}}</time>{{#if auth.expireAt}}, expires
               <time datetime={{auth.expireAtDatetime}} title={{auth.expireAtDateTitle}}>
                 {{moment-from-now auth.expireAt}}
               </time>

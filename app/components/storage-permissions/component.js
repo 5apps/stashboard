@@ -10,8 +10,8 @@ export default Component.extend({
     return this.get('permissions').map((permission) => {
       const split = permission.split(':');
       return {
-        directory: `/${split[0]}`,
-        access: split[1] === 'r' ? 'read' : 'read/write'
+        directory: `${split[0]}`,
+        access: split[1] === 'r' ? 'read-only' : ''
       }
     });
   })

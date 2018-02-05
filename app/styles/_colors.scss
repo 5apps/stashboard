@@ -16,6 +16,7 @@ $shadedShinyPurple: darken(shade($shinyPurple, 15%), 8%);
 // $darkBlue: #203248;
 
 $bodyTextColor: #192027;
+$bodyTextDiscreetColor: lighten($bodyTextColor, 50%);
 
 // Colors on dark background
 $darkBodyRed: #f66;

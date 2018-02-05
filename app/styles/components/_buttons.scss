@@ -1,0 +1,53 @@
+.button {
+  font-family: $bodyFontFamily;
+  font-size: 1rem; //TODO use relative unit
+
+  position: relative;
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  overflow: visible;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: 1px solid $shadedShinyBlue;
+  border-radius: 2px;
+  color: $shadedShinyBlue;
+  // background-color: transparent;
+  // border: 1px solid $shadedShinyBlue;
+  // border-radius: 2px;
+  // color: $shadedShinyBlue;
+
+  transition: all 0.1s linear;
+
+  &:hover {
+    // background-color: $lightBlue;
+    background-color: $shadedShinyBlue;
+    color: white;
+  }
+
+  &.small {
+    font-size: 11px; //TODO use relative value
+    padding: 0.1rem 0.5rem;
+  }
+
+  &.danger {
+    border-color: $rubyRed;
+    color: $rubyRed;
+    &:hover {
+      background-color: $rubyRed;
+      color: white;
+    }
+  }
+
+  &:disabled, &.disabled {
+    background-color: white;
+    border-color: #aaa;
+    color: #aaa;
+    &:hover {
+      background-color: #aaa;
+      color: white;
+    }
+  }
+}
