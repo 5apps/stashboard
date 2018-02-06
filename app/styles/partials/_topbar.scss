@@ -1,4 +1,4 @@
-header.navbar-top {
+header.topbar {
   height: 60px;
   line-height: 60px;
   background-color: $darkGrey;
@@ -72,15 +72,18 @@ header.navbar-top {
 @media screen and (max-width: 460px) {
   header.topbar {
     h1 {
-      .secondary {
+      span.primary {
         display: none;
+      }
+      span.secondary {
+        color: #fff;
       }
     }
     nav {
       ul {
         li {
           a {
-            padding: 0 0.5rem;
+            // padding: 0 0.5rem;
           }
           &:last-of-type a {
             padding-right: 1rem;
