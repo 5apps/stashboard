@@ -15,11 +15,15 @@
           </li>
         {{/if}}
         <li class="logout">
-          <a href="#" rel="nofollow" {{action "invalidateSession"}}>log out</a>
+          <a href="#" rel="nofollow" {{action "invalidateSession"}}>
+            {{partial "icons/sign-out"}} log out
+          </a>
         </li>
       {{else}}
         <li class="login">
-          {{#link-to "login"}}log in{{/link-to}}
+          {{#link-to "login"}}
+            {{partial "icons/sign-in"}} log in
+          {{/link-to}}
         </li>
         <li class="signup">
           <a href="https://{{baseDomain}}/users/sign_up?site=storage">sign up</a>
