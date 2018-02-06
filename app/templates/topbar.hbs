@@ -9,8 +9,8 @@
       {{#if session.isAuthenticated}}
         {{#if currentUser.user}}
           <li class="account">
-            <a href="/account/settings" style={{avatarStyle}}>
-              {{currentUser.user.username}}
+            <a href="/account/settings">
+              {{partial "icons/user"}} {{currentUser.user.username}}
             </a>
           </li>
         {{/if}}
