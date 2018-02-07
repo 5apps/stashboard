@@ -1,7 +1,18 @@
 {{#each parsedPermissions as |permission|}}
   <span class="permission">
-    <span class="directory">{{permission.directory}}</span>
-    &nbsp;
-    <span class="access">{{permission.access}}</span>
+    {{#if permission.root}}
+      <span class="directory root">
+        {{partial "icons/asterisk"}}
+        all categories and files
+      </span>
+    {{else}}
+      <span class="directory">
+        {{partial "icons/folder-alt"}}
+        {{permission.directory}}
+      </span>
+    {{/if}}
+    {{#if permission.access}}
+      <span class="access">{{permission.access}}</span>
+    {{/if}}
   </span>
 {{/each}}

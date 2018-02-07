@@ -1,0 +1,26 @@
+span.permission {
+  display: inline-block;
+  margin-right: 0.4em;
+
+  .directory {
+    svg {
+      height: 1.2em;
+      width: auto;
+      vertical-align: middle;
+      margin-top: -0.2em;
+      margin-right: 0.2em;
+
+      path {
+        fill: $bodyTextColor;
+      }
+    }
+
+    // &.root {
+    //   svg {
+    //     path {
+    //       fill: $rubyRed;
+    //     }
+    //   }
+    // }
+  }
+}

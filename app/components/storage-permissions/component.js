@@ -9,9 +9,11 @@ export default Component.extend({
   parsedPermissions: computed('permissions.[]', function() {
     return this.get('permissions').map((permission) => {
       const split = permission.split(':');
+
       return {
-        directory: `${split[0]}`,
-        access: split[1] === 'r' ? 'read-only' : ''
+        root: split[0] === '',
+        directory: split[0],
+        access: split[1] === 'r' ? 'read-only' : null
       }
     });
   })
