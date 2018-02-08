@@ -49,9 +49,20 @@ section#apps {
 
         &.icon {
           height: 120px;
-          @include padding(null 2rem);
-          // background: #ccc;
+          padding: 0;
           border-right: 1px solid $lightBodyContentBoxBorder;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            max-width: 72px;
+            max-height: 72px;
+
+            path {
+              fill: $lightBodyContentBoxBorder;
+            }
+          }
         }
 
         &.app-name {
