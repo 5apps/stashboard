@@ -3,92 +3,150 @@ section#apps {
     margin-bottom: 4rem;
   }
 
-  .authorizations {
-    .auth {
-      @include contentBox;
-      margin-bottom: 1rem;
-      display: grid;
-      grid-template-columns: 120px 1fr 1fr 1fr 1fr;
+  .auth {
+    @include contentBox;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr 1fr 1fr;
 
-      h4 {
-        line-height: 2rem;
-        margin: 0;
+    h4 {
+      line-height: 2rem;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 1.28rem;
+      font-weight: normal;
+      // background: #efefef;
+      // border-right: 1px solid $lightBodyContentBoxBorder;
+    }
+
+    p {
+      margin: 0;
+      line-height: 2rem;
+    }
+
+    > div {
+      grid-column-end: span 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0.8rem 1.4rem;
+      text-align: left;
+
+      &.icon {
+        height: 120px;
+        padding: 0;
+        border-right: 1px solid $lightBodyContentBoxBorder;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          max-width: 72px;
+          max-height: 72px;
+
+          path {
+            fill: $lightBodyContentBoxBorder;
+          }
+        }
+      }
+
+      &.app-name {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        font-size: 1.28rem;
-        font-weight: normal;
-        // background: #efefef;
-        // border-right: 1px solid $lightBodyContentBoxBorder;
+
+        a {
+          color: $bodyTextDiscreetColor;
+        }
       }
 
-      p {
-        margin: 0;
-        line-height: 2rem;
+      &.metadata {
+        grid-column-end: span 2;
+
+        p {
+          &.created-at {
+            font-size: 0.9rem;
+            color: $bodyTextDiscreetColor;
+          }
+        }
       }
+
+      &.actions {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        .button {
+          flex: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section#apps {
+    .auth {
+      grid-template-columns: 120px 1fr 50%;
+      grid-template-rows: 120px 80px;
 
       > div {
-        grid-column-end: span 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 0.8rem 1.4rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        text-align: left;
-
-        &:last-child {
-          border-right: none;
-        }
-
-        // h4, p {
-        //   flex: 0;
-        // }
-
         &.icon {
-          height: 120px;
-          padding: 0;
-          border-right: 1px solid $lightBodyContentBoxBorder;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          svg {
-            max-width: 72px;
-            max-height: 72px;
-
-            path {
-              fill: $lightBodyContentBoxBorder;
-            }
-          }
         }
 
         &.app-name {
-          a {
-            color: $bodyTextDiscreetColor;
+        }
+
+        &.metadata {
+          grid-column-end: span 1;
+        }
+
+        &.actions {
+          grid-column-end: span 3;
+          border-top: 1px solid $lightBodyContentBoxBorder;
+
+          .button {
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  section#apps {
+    .auth {
+      grid-template-columns: 120px 1fr;
+      grid-template-rows: 120px 120px auto;
+
+      > div {
+        grid-column-end: span 1;
+
+        &.icon {
+        }
+
+        &.app-name {
         }
 
         &.metadata {
           grid-column-end: span 2;
-
-          p {
-            &.created-at {
-              font-size: 0.9rem;
-              color: $bodyTextDiscreetColor;
-            }
-          }
+          border-top: 1px solid $lightBodyContentBoxBorder;
         }
 
         &.actions {
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
+          grid-column-end: span 2;
+          display: block;
+          border-top: 1px solid $lightBodyContentBoxBorder;
+          padding: 0;
 
           .button {
-            flex: 0;
+            display: block;
+            padding: 0.9rem 0;
+            border: none;
+            text-align: center;
           }
         }
       }
