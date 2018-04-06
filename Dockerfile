@@ -8,7 +8,7 @@ RUN echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >
 RUN apt-get update && apt-get install -y google-chrome-stable unzip
 
 # Set up ChromeDriver environment variables
-ENV CHROMEDRIVER_VERSION 2.33
+ENV CHROMEDRIVER_VERSION 2.37
 ENV CHROMEDRIVER_DIR /chromedriver
 
 # Download and install ChromeDriver
@@ -24,8 +24,6 @@ WORKDIR /app
 
 # see https://git.io/vdao3
 ENV JOBS 1
-
-RUN npm install -g phantomjs-prebuilt --unsafe-perm
 
 COPY package.json package-lock.json ./
 RUN npm install
