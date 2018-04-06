@@ -1,0 +1,4 @@
+- name: ci
+  service: app
+  command: npm test
+
