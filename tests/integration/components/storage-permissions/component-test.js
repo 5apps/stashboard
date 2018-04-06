@@ -10,9 +10,9 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{storage-permissions permissions=permissions}}`);
 
-  assert.equal(this.$('.permission:first .directory').text().trim(), '/documents');
-  assert.equal(this.$('.permission:first .access').text().trim(), 'read/write');
+  assert.equal(this.$('.permission:first .directory').text().trim(), 'documents');
+  assert.equal(this.$('.permission:first .access').length, 0);
 
-  assert.equal(this.$('.permission:last .directory').text().trim(), '/shares');
-  assert.equal(this.$('.permission:last .access').text().trim(), 'read');
+  assert.equal(this.$('.permission:last .directory').text().trim(), 'shares');
+  assert.equal(this.$('.permission:last .access').text().trim(), 'read-only');
 });
