@@ -25,6 +25,8 @@ WORKDIR /app
 # see https://git.io/vdao3
 ENV JOBS 1
 
+npm install -g phantomjs-prebuilt
+
 COPY package.json package-lock.json ./
 RUN npm install
 
