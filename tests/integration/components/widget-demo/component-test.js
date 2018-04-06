@@ -1,20 +1,22 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('widget-demo', 'Integration | Component | widget demo', {
-  integration: true
-});
+module('Integration | Component | widget demo', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it toggles on click', function(assert) {
-  this.render(hbs`{{widget-demo}}`);
+  test('it toggles on click', async function(assert) {
+    await render(hbs`{{widget-demo}}`);
 
-  assert.ok(this.$('img').attr('src').match('rs-connect.png'));
+    assert.ok(this.$('img').attr('src').match('rs-connect.png'));
 
-  this.$('img').click();
+    this.$('img').click();
 
-  assert.ok(this.$('img').attr('src').match('rs-howto-connect.gif'));
+    assert.ok(this.$('img').attr('src').match('rs-howto-connect.gif'));
 
-  this.$('img').click();
+    this.$('img').click();
 
-  assert.ok(this.$('img').attr('src').match('rs-connect.png'));
+    assert.ok(this.$('img').attr('src').match('rs-connect.png'));
+  });
 });

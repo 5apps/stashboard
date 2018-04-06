@@ -1,6 +1,6 @@
-import Ember from 'ember';
-
-const { Component, computed, String } = Ember;
+import Component from '@ember/component';
+import { computed } from '@ember/object';
+import { htmlSafe } from '@ember/string';
 
 export default Component.extend({
 
@@ -24,7 +24,7 @@ export default Component.extend({
   style: computed('percent', function() {
     const width = this.get('percent') > 1 ? this.get('percent') : 1;
 
-    return String.htmlSafe(`width: ${width}%`);
+    return htmlSafe(`width: ${width}%`);
   })
 
 });

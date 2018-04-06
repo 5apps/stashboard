@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
+import { isPresent } from '@ember/utils';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
-
-const { Route, inject: { service }, isPresent } = Ember;
 
 export default Route.extend(AuthenticatedRouteMixin, {
 
