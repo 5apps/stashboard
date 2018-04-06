@@ -25,6 +25,8 @@ WORKDIR /app
 # see https://git.io/vdao3
 ENV JOBS 1
 
+RUN npm install bower -g --no-progress
+
 COPY package.json package-lock.json ./
 RUN npm install
 RUN bower install
