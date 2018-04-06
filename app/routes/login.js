@@ -1,8 +1,7 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin';
 import config from '../config/environment';
-
-const { Route, inject: { service } } = Ember;
 
 export default Route.extend(UnauthenticatedRouteMixin, {
 

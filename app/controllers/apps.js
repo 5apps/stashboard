@@ -1,6 +1,8 @@
-import Ember from 'ember';
-
-const { Controller, inject: { service }, computed, isEmpty, $ } = Ember;
+import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
+import { isEmpty } from '@ember/utils';
+import $ from 'jquery';
 
 export default Controller.extend({
 

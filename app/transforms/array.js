@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import { A, isArray } from '@ember/array';
 import DS from 'ember-data';
-
-const { isArray, A } = Ember;
 
 export default DS.Transform.extend({
 

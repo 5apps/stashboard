@@ -1,18 +1,20 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('storage-permissions', 'Integration | Component | storage permissions', {
-  integration: true
-});
+module('Integration | Component | storage permissions', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
-  this.set('permissions', ['documents:rw', 'shares:r']);
+  test('it renders', async function(assert) {
+    this.set('permissions', ['documents:rw', 'shares:r']);
 
-  this.render(hbs`{{storage-permissions permissions=permissions}}`);
+    await render(hbs`{{storage-permissions permissions=permissions}}`);
 
-  assert.equal(this.$('.permission:first .directory').text().trim(), 'documents');
-  assert.equal(this.$('.permission:first .access').length, 0);
+    assert.equal(this.$('.permission:first .directory').text().trim(), 'documents');
+    assert.equal(this.$('.permission:first .access').length, 0);
 
-  assert.equal(this.$('.permission:last .directory').text().trim(), 'shares');
-  assert.equal(this.$('.permission:last .access').text().trim(), 'read-only');
+    assert.equal(this.$('.permission:last .directory').text().trim(), 'shares');
+    assert.equal(this.$('.permission:last .access').text().trim(), 'read-only');
+  });
 });
