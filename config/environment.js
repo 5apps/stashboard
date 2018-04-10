@@ -23,7 +23,7 @@ module.exports = function(environment) {
     },
 
     baseDomain: '5apps.dev',
-    apiHost: 'https://develop.5apps.dev'
+    apiHost: 'https://api.5apps.dev'
   };
 
   if (environment === 'development') {
