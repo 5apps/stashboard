@@ -8,8 +8,11 @@ export default Controller.extend({
   currentUser: service(),
   baseDomain: config.baseDomain,
 
+  userTriggeredSignout: false,
+
   actions: {
-    invalidateSession() {
+    logout () {
+      this.set('userTriggeredSignout', true);
       this.get('session').invalidate();
     }
   }
