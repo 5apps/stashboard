@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports = function(environment) {
+
+  const deployTarget = process.env.DEPLOY_TARGET;
+
   let ENV = {
     modulePrefix: 'storage-frontend',
     environment,
@@ -24,6 +27,10 @@ module.exports = function(environment) {
 
     baseDomain: '5apps.dev',
     apiHost: 'https://api.5apps.dev'
+
+    // staging
+    // baseDomain: '5stage.com',
+    // apiHost: 'https://develop.5stage.com'
   };
 
   if (environment === 'development') {
@@ -46,9 +53,14 @@ module.exports = function(environment) {
     ENV.APP.autoboot = false;
   }
 
-  if (environment === 'production') {
+  if (deployTarget === 'production') {
     ENV.baseDomain = '5apps.com';
     ENV.apiHost = 'https://api.5apps.com';
+  }
+
+  if (deployTarget === 'staging') {
+    ENV.baseDomain = '5stage.com';
+    ENV.apiHost = 'https://api.5stage.com';
   }
 
   return ENV;
