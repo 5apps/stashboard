@@ -26,11 +26,13 @@ module.exports = function(environment) {
     },
 
     baseDomain: '5apps.dev',
-    apiHost: 'https://api.5apps.dev'
+    apiHost: 'https://api.5apps.dev',
 
-    // staging
-    // baseDomain: '5stage.com',
-    // apiHost: 'https://develop.5stage.com'
+    sentry: {
+      dsn: 'https://97e0666aac54498ba23adef4993055d3@sentry.io/1188030',
+      development: true,
+      ravenOptions: {}
+    }
   };
 
   if (environment === 'development') {
@@ -39,6 +41,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV.sentry.debug = true;
   }
 
   if (environment === 'test') {
@@ -56,11 +60,17 @@ module.exports = function(environment) {
   if (deployTarget === 'production') {
     ENV.baseDomain = '5apps.com';
     ENV.apiHost = 'https://api.5apps.com';
+
+    ENV.sentry.development = false;
+    ENV.sentry.ravenOptions.environment = 'production';
   }
 
   if (deployTarget === 'staging') {
     ENV.baseDomain = '5stage.com';
     ENV.apiHost = 'https://api.5stage.com';
+
+    ENV.sentry.development = false;
+    ENV.sentry.ravenOptions.environment = 'staging';
   }
 
   return ENV;
