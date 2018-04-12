@@ -1,7 +1,7 @@
 # storage-frontend
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is the frontend app for managing a user's remoteStorage
+authorizations.
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:5apps/storage-frontend.git` this repository
 * `cd storage-frontend`
 * `npm install`
 
@@ -23,10 +23,6 @@ You will need the following things properly installed on your computer.
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 
@@ -38,19 +34,20 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `npm run lint:js`
 * `npm run lint:js -- --fix`
 
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
 ### Deploying
 
-Specify what it takes to deploy your app.
+* `ember deploy <deploy target>`
 
-## Further Reading / Useful Links
+The deploy target can be either `development`, `staging` or
+`production`, with `production` being the default.
 
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+#### Deploying to the Vagrant development box
+
+To be able to deploy to development, you'll need to create a Deploy app
+on 5apps.dev under the "5apps" user, called "storage-frontend" with the
+domain "storage-frontend.5apps.dev".
+
+After creating the app, you'll have to push a first commit to the app's
+deploy repo with just a basic index.html file, because `ember-cli-deploy` will
+try to fetch the repo first and fail if it's empty.
+
