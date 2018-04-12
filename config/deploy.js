@@ -3,8 +3,14 @@
 
 module.exports = function(deployTarget) {
   let ENV = {
-    build: {}
-    // include other plugin configuration that applies to all deploy targets here
+    build: {},
+
+    sentry: {
+      sentryUrl: 'https://sentry.io',
+      sentryOrganizationSlug: '5apps',
+      sentryProjectSlug: 'storage-frontend',
+      sentryBearerApiKey: process.env.SENTRY_API_TOKEN
+    }
   };
 
   if (deployTarget === 'development') {
@@ -16,6 +22,12 @@ module.exports = function(deployTarget) {
       worktreePath: '/tmp/storage-frontend-deploy',
       commitMessage: 'Deployed %@'
     };
+
+    ENV.pipeline = {
+      disabled: {
+        sentry: true,
+      }
+    }
   }
 
   if (deployTarget === 'staging') {
@@ -27,6 +39,8 @@ module.exports = function(deployTarget) {
       worktreePath: '/tmp/storage-frontend-deploy',
       commitMessage: 'Deployed %@'
     };
+
+    ENV.sentry.publicUrl = 'https://storage.5stage.com/account/';
   }
 
   if (deployTarget === 'production') {
@@ -39,6 +53,7 @@ module.exports = function(deployTarget) {
       commitMessage: 'Deployed %@'
     };
 
+    ENV.sentry.publicUrl = 'https://storage.5apps.com/account/';
   }
 
   // Note: if you need to build some configuration asynchronously, you can return

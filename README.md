@@ -41,6 +41,11 @@ You will need the following things properly installed on your computer.
 The deploy target can be either `development`, `staging` or
 `production`, with `production` being the default.
 
+To create new Sentry releases and upload sourcemaps during deploy,
+you'll need to copy the `.env.example` file as `.env` and add your token
+to it. The token can be created at https://sentry.io/api/ with the scope
+"project:releases".
+
 #### Deploying to the Vagrant development box
 
 To be able to deploy to development, you'll need to create a Deploy app
