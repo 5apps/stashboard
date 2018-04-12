@@ -5,6 +5,7 @@ export default Service.extend({
 
   session: service(),
   store: service(),
+  raven: service(),
 
   user: null,
 
@@ -12,6 +13,7 @@ export default Service.extend({
     if (this.get('session.isAuthenticated')) {
       return this.get('store').queryRecord('user', { me: true }).then((user) => {
         this.set('user', user);
+        this.get('raven').setUserContext(user);
       });
     } else {
       return RSVP.resolve();
