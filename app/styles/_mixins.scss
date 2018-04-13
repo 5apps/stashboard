@@ -1,4 +1,6 @@
 @mixin contentBox {
   background-color: #fff;
   border: 1px solid $lightBodyContentBoxBorder;
+  border-radius: .15rem;
+  box-shadow: 0 1px 0 rgba(52, 68, 83, .15);
 }
