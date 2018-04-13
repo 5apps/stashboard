@@ -19,7 +19,7 @@ module.exports = function(deployTarget) {
     ENV.git = {
       repo: 'git@5apps.dev:5apps_storage-frontend.git',
       branch: 'master',
-      worktreePath: '/tmp/storage-frontend-deploy',
+      worktreePath: '/tmp/storage-frontend-deploy-development',
       commitMessage: 'Deployed %@'
     };
 
@@ -36,7 +36,7 @@ module.exports = function(deployTarget) {
     ENV.git = {
       repo: 'git@5stage.com:5apps_storage-frontend.git',
       branch: 'master',
-      worktreePath: '/tmp/storage-frontend-deploy',
+      worktreePath: '/tmp/storage-frontend-deploy-staging',
       commitMessage: 'Deployed %@'
     };
 
@@ -49,7 +49,7 @@ module.exports = function(deployTarget) {
     ENV.git = {
       repo: 'git@5apps.com:5apps_storage-frontend.git',
       branch: 'master',
-      worktreePath: '/tmp/storage-frontend-deploy',
+      worktreePath: '/tmp/storage-frontend-deploy-production',
       commitMessage: 'Deployed %@'
     };
 
