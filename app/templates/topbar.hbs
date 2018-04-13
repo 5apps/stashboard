@@ -9,7 +9,7 @@
       {{#if session.isAuthenticated}}
         {{#if currentUser.user}}
           <li class="account">
-            <a href="/account/settings">
+          <a href="https://{{baseDomain}}/account/settings">
               {{partial "icons/user"}} {{currentUser.user.username}}
             </a>
           </li>
