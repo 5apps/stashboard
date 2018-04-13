@@ -9,6 +9,11 @@ module.exports = function(defaults) {
         'node_modules/bourbon/app/assets/stylesheets'
       ]
     },
+
+    sourcemaps: {
+      enabled: true,
+      extensions: ['js']
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
