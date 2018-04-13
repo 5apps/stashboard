@@ -56,3 +56,14 @@ After creating the app, you'll have to push a first commit to the app's
 deploy repo with just a basic index.html file, because `ember-cli-deploy` will
 try to fetch the repo first and fail if it's empty.
 
+#### Reusing the previous build for deployment
+
+In cases when the last deployment didn't work, e.g. because of network
+issues, you don't need to do the whole build step again. For this you
+can define an environment variable to reuse the build from the previous
+deployment:
+
+    EMBER_CLI_DEPLOY_REUSE_BUILD=true ember deploy <deploy target>
+
+
+
