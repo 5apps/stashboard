@@ -11,6 +11,14 @@ header.topbar {
     color: #fff;
     @include headlineFont(uppercase);
 
+    a {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        color: $shinyBlue;
+      }
+    }
+
     span.secondary {
       color: $greyTextOnDarkGrey
     }

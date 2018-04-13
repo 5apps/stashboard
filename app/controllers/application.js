@@ -7,6 +7,7 @@ export default Controller.extend({
   session: service(),
   currentUser: service(),
   baseDomain: config.baseDomain,
+  frontpageUrl: 'https://'+config.baseDomain,
 
   userTriggeredSignout: false,
 
