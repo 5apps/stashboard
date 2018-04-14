@@ -28,7 +28,13 @@ export default Route.extend(ApplicationRouteMixin, {
   },
 
   _loadCurrentUser() {
-    return this.get('currentUser').load().catch(() => this.get('session').invalidate());
+    return this.get('currentUser').load().catch((response) => {
+      if (response.errors[0].status === "401") {
+        this.get('session').invalidate();
+      }
+
+      // TODO show error message
+    });
   }
 
 });
