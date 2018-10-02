@@ -1,7 +1,0 @@
-- name: linting
-  service: app
-  command: npm run lint:js
-- name: tests
-  service: app
-  command: npm test
-
