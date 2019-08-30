@@ -8,7 +8,7 @@ export default Route.extend(AuthenticatedRouteMixin, {
   store: service(),
 
   model() {
-    return this.get('store').findAll('authorization');
+    return this.store.findAll('authorization');
   },
 
   afterModel(model) {

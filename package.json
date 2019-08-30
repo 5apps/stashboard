@@ -2,7 +2,7 @@
   "name": "storage-frontend",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for storage-frontend goes here",
+  "description": "5apps Storage Web UI",
   "repository": "",
   "license": "MIT",
   "author": "",
@@ -56,7 +56,8 @@
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^9.0.1",
     "loader.js": "^4.7.0",
-    "qunit-dom": "^0.8.4"
+    "qunit-dom": "^0.8.4",
+    "sass": "^1.22.10"
   },
   "engines": {
     "node": "8.* || >= 10.*"

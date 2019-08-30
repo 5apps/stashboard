@@ -9,20 +9,20 @@
       {{#if session.isAuthenticated}}
         {{#if currentUser.user}}
           <li class="account">
-          <a href="https://{{baseDomain}}/account/settings">
-              {{partial "icons/user"}} {{currentUser.user.username}}
+            <a href="https://{{baseDomain}}/account/settings">
+              {{icons/user}} {{currentUser.user.username}}
             </a>
           </li>
         {{/if}}
         <li class="logout">
           <a href="#" rel="nofollow" {{action "logout"}}>
-            {{partial "icons/sign-out"}} log out
+            {{icons/sign-out}} log out
           </a>
         </li>
       {{else}}
         <li class="login">
           {{#link-to "login"}}
-            {{partial "icons/sign-in"}} log in
+            {{icons/sign-in}} log in
           {{/link-to}}
         </li>
         <li class="signup">

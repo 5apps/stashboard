@@ -24,11 +24,11 @@ export default Route.extend(ApplicationRouteMixin, {
     }
 
     // re-authenticate when token expired
-    this.get('session').authenticateWithImplicitGrant();
+    this.session.authenticateWithImplicitGrant();
   },
 
   _loadCurrentUser() {
-    return this.get('currentUser').load().catch(() => this.get('session').invalidate());
+    return this.currentUser.load().catch(() => this.session.invalidate());
   }
 
 });

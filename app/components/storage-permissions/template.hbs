@@ -2,12 +2,12 @@
   <span class="permission">
     {{#if permission.root}}
       <span class="directory root">
-        {{partial "icons/asterisk"}}
+        {{icons/asterisk}}
         all categories and files
       </span>
     {{else}}
       <span class="directory">
-        {{partial "icons/folder-alt"}}
+        {{icons/folder-alt}}
         {{permission.directory}}
       </span>
     {{/if}}

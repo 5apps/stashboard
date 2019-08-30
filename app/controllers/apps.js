@@ -13,7 +13,7 @@ export default Controller.extend({
   }),
 
   categoriesCount: computed('model.@each.permissions', function() {
-    const permissions = this.get('model').map((auth) => {
+    const permissions = this.model.map((auth) => {
       return auth.get('permissions').map((permission) => {
         return permission.split(':')[0];
       });
@@ -27,7 +27,7 @@ export default Controller.extend({
       $(`.auth[data-id=${auth.get('id')}]`).fadeOut();
 
       auth.destroyRecord().then(() => {
-        if (isEmpty(this.get('model'))) {
+        if (isEmpty(this.model)) {
           this.transitionToRoute('welcome');
         }
       });

@@ -14,7 +14,7 @@ export default Controller.extend({
   actions: {
     logout () {
       this.set('userTriggeredSignout', true);
-      this.get('session').invalidate();
+      this.session.invalidate();
     }
   }
 
