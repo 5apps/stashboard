@@ -27,11 +27,7 @@ module.exports = {
         'blueprints/*/index.js',
         'config/**/*.js',
         'lib/*/index.js',
-<<<<<<< HEAD
-        'server/index.js'
-=======
         'server/**/*.js'
->>>>>>> d4c092d... message
       ],
       parserOptions: {
         sourceType: 'script'

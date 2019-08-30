@@ -19,15 +19,6 @@
 /testem.log
 /yarn-error.log
 
-# ember-try
-<<<<<<< HEAD
-.node_modules.ember-try/
-bower.json.ember-try
-package.json.ember-try
-
-.env
-=======
 /.node_modules.ember-try/
 /bower.json.ember-try
 /package.json.ember-try
->>>>>>> d4c092d... message

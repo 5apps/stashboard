@@ -11,13 +11,7 @@ module.exports = {
     Chrome: {
       ci: [
         // --no-sandbox is needed when running Chrome inside a container
-<<<<<<< HEAD
-        process.env.TRAVIS || process.env.CI ? '--no-sandbox' : null,
-
-        '--disable-gpu',
-=======
         process.env.CI ? '--no-sandbox' : null,
->>>>>>> d4c092d... message
         '--headless',
         '--disable-dev-shm-usage',
         '--disable-software-rasterizer',
