@@ -10,7 +10,6 @@ module.exports = {
   },
 
   ignore: [
-    'app/templates/components/icons/**',
-    'app/templates/components/brand/**'
+    'app/templates/components/icons/**'
   ]
 };
