@@ -3,6 +3,8 @@ import config from '../config/environment';
 
 export default SessionService.extend({
 
+  userTriggeredSignout: false,
+
   authenticateWithImplicitGrant() {
     const clientId = 'storage-frontend';
     const redirectURI = `${window.location.origin}${config.rootURL}callback`;

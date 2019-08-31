@@ -18,7 +18,7 @@ export default Route.extend(ApplicationRouteMixin, {
   },
 
   sessionInvalidated() {
-    if (this.get('controller.userTriggeredSignout')) {
+    if (this.session.userTriggeredSignout) {
       window.location.replace(`https://${config.baseDomain}/storage/users/sign_out`);
       return;
     }
