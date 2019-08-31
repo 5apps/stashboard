@@ -7,7 +7,7 @@ section#apps {
     @include contentBox;
     margin-bottom: 1rem;
     display: grid;
-    grid-template-columns: 120px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
 
     h4 {
       line-height: 2rem;
@@ -37,7 +37,7 @@ section#apps {
       background-color: #fff;
 
       &.icon {
-        height: 120px;
+        height: 100px;
         padding: 0;
         display: flex;
         align-items: center;
@@ -46,8 +46,8 @@ section#apps {
         border-right: 1px solid $lightBodyContentBoxBorder;
 
         svg {
-          max-width: 72px;
-          max-height: 72px;
+          max-width: 57px;
+          max-height: 57px;
 
           path {
             fill: $lightBodyContentBoxBorder;
@@ -123,8 +123,8 @@ section#apps {
 @media screen and (max-width: 760px) {
   section#apps {
     .auth {
-      grid-template-columns: 120px 1fr;
-      grid-template-rows: 120px;
+      grid-template-columns: 100px 1fr;
+      grid-template-rows: 100px;
 
       > div {
         grid-column-end: span 1;
@@ -146,7 +146,7 @@ section#apps {
           transition: all 0.2s ease-out;
 
           &.open {
-            height: 120px;
+            height: 100px;
             transform: translate3d(0, 0, 0);
             opacity: 1;
           }
