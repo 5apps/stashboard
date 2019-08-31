@@ -7,7 +7,7 @@ section#apps {
     @include contentBox;
     margin-bottom: 1rem;
     display: grid;
-    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
     h4 {
       line-height: 2rem;
@@ -56,6 +56,7 @@ section#apps {
       }
 
       &.app-name {
+        grid-column-end: span 3;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -67,7 +68,7 @@ section#apps {
       }
 
       &.metadata {
-        grid-column-end: span 2;
+        grid-column-end: span 3;
         z-index: 1;
 
         p {
@@ -94,22 +95,20 @@ section#apps {
 @media screen and (max-width: 900px) {
   section#apps {
     .auth {
-      grid-template-columns: 120px 1fr 50%;
-      grid-template-rows: 120px 80px;
-
       > div {
         &.icon {
         }
 
         &.app-name {
+          grid-column-end: span 3;
         }
 
         &.metadata {
-          grid-column-end: span 1;
+          grid-column-end: span 3;
         }
 
         &.actions {
-          grid-column-end: span 3;
+          grid-column-end: span 8;
           border-top: 1px solid $lightBodyContentBoxBorder;
 
           .button {
@@ -123,9 +122,6 @@ section#apps {
 @media screen and (max-width: 760px) {
   section#apps {
     .auth {
-      grid-template-columns: 100px 1fr;
-      grid-template-rows: 100px;
-
       > div {
         grid-column-end: span 1;
 
@@ -133,10 +129,11 @@ section#apps {
         }
 
         &.app-name {
+          grid-column-end: span 7;
         }
 
         &.metadata {
-          grid-column-end: span 2;
+          grid-column-end: span 8;
           // height: 120px;
           @include padding(0 null);
           height: 0;
@@ -153,7 +150,7 @@ section#apps {
         }
 
         &.actions {
-          grid-column-end: span 2;
+          grid-column-end: span 8;
           display: block;
           padding: 0;
           height: 0;
