@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
+import config from '../config/environment';
 
 export default Component.extend({
 
@@ -7,6 +8,8 @@ export default Component.extend({
 
   session: service(),
   currentUser: service(),
+
+  baseDomain: config.baseDomain,
 
   actions: {
     logout () {
