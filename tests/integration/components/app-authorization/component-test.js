@@ -26,6 +26,6 @@ module('Integration | Component | app authorization', function(hooks) {
 
     await render(hbs`{{app-authorization auth=auth}}`);
 
-    assert.equal(this.$('.app-name h4').text().trim(), 'My fancy app');
+    assert.dom('.app-name h4').hasText('My fancy app');
   });
 });

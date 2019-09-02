@@ -18,17 +18,17 @@ export default Route.extend(ApplicationRouteMixin, {
   },
 
   sessionInvalidated() {
-    if (this.get('controller.userTriggeredSignout')) {
+    if (this.session.userTriggeredSignout) {
       window.location.replace(`https://${config.baseDomain}/storage/users/sign_out`);
       return;
     }
 
     // re-authenticate when token expired
-    this.get('session').authenticateWithImplicitGrant();
+    this.session.authenticateWithImplicitGrant();
   },
 
   _loadCurrentUser() {
-    return this.get('currentUser').load().catch(() => this.get('session').invalidate());
+    return this.currentUser.load().catch(() => this.session.invalidate());
   }
 
 });

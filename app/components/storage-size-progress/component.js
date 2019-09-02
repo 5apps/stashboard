@@ -8,7 +8,7 @@ export default Component.extend({
   percent: null,
 
   warningLevel: computed('percent', function() {
-    const percent = this.get('percent');
+    const percent = this.percent;
 
     if (percent >= 75 && percent <= 89) {
       return 'warn';
@@ -22,7 +22,7 @@ export default Component.extend({
   }),
 
   style: computed('percent', function() {
-    const width = this.get('percent') > 1 ? this.get('percent') : 1;
+    const width = this.percent > 1 ? this.percent : 1;
 
     return htmlSafe(`width: ${width}%`);
   })

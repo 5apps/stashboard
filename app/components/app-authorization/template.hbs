@@ -1,25 +1,23 @@
 <div class="icon">
-  {{partial "brand/icon-flat"}}
+  {{icons/brand-icon-flat}}
 </div>
 <div class="app-name">
   <h4>
     {{auth.appName}}
   </h4>
   <p>
-  <a href="{{auth.launchUrl}}" class="app_url" target="_blank">{{auth.clientId}}</a>
+    <a href={{auth.launchUrl}} class="app_url" target="_blank" rel="noopener">
+      {{auth.clientId}}
+    </a>
   </p>
 </div>
 <div class="metadata">
   <p>
-  {{storage-permissions permissions=auth.permissions}}
+    {{storage-permissions permissions=auth.permissions}}
   </p>
   <p class="created-at">
-  Approved
-  <time datetime={{auth.createdAtDatetime}} title={{auth.createdAtDateTitle}}>{{moment-from-now auth.createdAt}}</time>{{#if auth.expireAt}}, expires
-  <time datetime={{auth.expireAtDatetime}} title={{auth.expireAtDateTitle}}>
-    {{moment-from-now auth.expireAt}}
-  </time>
-  {{/if}}
+    Approved
+    <time datetime={{auth.createdAtDatetime}} title={{auth.createdAtDateTitle}}>{{moment-from-now auth.createdAt}}</time>{{#if auth.expireAt}}, expires <time datetime={{auth.expireAtDatetime}} title={{auth.expireAtDateTitle}}>{{moment-from-now auth.expireAt}}</time>{{/if}}
   </p>
 </div>
 <div class="actions">
