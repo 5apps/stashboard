@@ -10,7 +10,7 @@
         {{#if currentUser.user}}
           <li class="account">
             <a href="https://{{baseDomain}}/account/settings">
-              {{icons/user}} {{currentUser.user.username}}<span class="hostname">@{{currentUser.user.storageHost}}</span>
+              {{icons/user}} <span class="username">{{currentUser.user.username}}</span><span class="hostname">@{{currentUser.user.storageHost}}</span>
             </a>
           </li>
         {{/if}}

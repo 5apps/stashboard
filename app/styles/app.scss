@@ -1,11 +1,8 @@
 @import "bourbon";
-
 @import "resets";
 @import "colors";
 @import "fonts";
 @import "mixins";
-
-@import "partials/topbar";
 
 html {
   font-size: 14px;
@@ -55,6 +52,7 @@ section.content {
 
 }
 
+@import "components/topbar";
 @import "components/blurb";
 @import "components/buttons";
 @import "components/storage-permissions";

@@ -83,18 +83,23 @@ header.topbar {
       span.primary {
         display: none;
       }
+
       span.secondary {
         color: #fff;
       }
     }
+
     nav {
       ul {
         li {
-          a {
-            // padding: 0 0.5rem;
-          }
           &:last-of-type a {
             padding-right: 1rem;
+          }
+
+          &.account {
+            .hostname {
+              display: none;
+            }
           }
         }
       }
