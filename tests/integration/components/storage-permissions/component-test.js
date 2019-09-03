@@ -11,10 +11,10 @@ module('Integration | Component | storage permissions', function(hooks) {
 
     await render(hbs`{{storage-permissions permissions=permissions}}`);
 
-    assert.equal(this.$('.permission:first .directory').text().trim(), 'documents');
-    assert.equal(this.$('.permission:first .access').length, 0);
+    assert.equal(this.element.querySelector('.permission:first-child .directory').textContent.trim(), 'documents');
+    assert.equal(this.element.querySelectorAll('.permission:first-child .access').length, 0);
 
-    assert.equal(this.$('.permission:last .directory').text().trim(), 'shares');
-    assert.equal(this.$('.permission:last .access').text().trim(), 'read-only');
+    assert.equal(this.element.querySelector('.permission:last-child .directory').textContent.trim(), 'shares');
+    assert.equal(this.element.querySelector('.permission:last-child .access').textContent.trim(), 'read-only');
   });
 });
