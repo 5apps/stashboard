@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { run } from '@ember/runloop';
 
 export default Component.extend({
 
@@ -16,7 +17,11 @@ export default Component.extend({
   actions: {
 
     revoke (auth) {
-      this.revokeAccess(auth);
+      this.element.classList.add('fade-out');
+      run.later(this, function() {
+        this.element.classList.add('hidden');
+        this.revokeAccess(auth);
+      }, 500);
     }
 
   }

@@ -24,11 +24,6 @@ section#apps {
       line-height: 2rem;
     }
 
-    &.hide {
-      height: 0;
-      transition: opacity 700ms ease, height 300ms ease 700ms;
-    }
-
     > div {
       grid-column-end: span 1;
       display: flex;

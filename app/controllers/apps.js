@@ -22,16 +22,15 @@ export default Controller.extend({
   }),
 
   actions: {
-    revokeAccess(auth) {
-      document.querySelector(`.auth[data-id=${auth.id}]`)
-              .classList.add('hide');
 
+    revokeAccess (auth) {
       auth.destroyRecord().then(() => {
         if (isEmpty(this.model)) {
           this.transitionToRoute('welcome');
         }
       });
     }
+
   }
 
 });
