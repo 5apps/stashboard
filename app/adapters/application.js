@@ -11,6 +11,7 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
 
   authorize (xhr) {
     const { access_token } = this.get('session.data.authenticated');
+    debugger;
 
     if (isPresent(access_token)) {
       xhr.setRequestHeader('Authorization', `OAuth ${access_token}`);

@@ -18,7 +18,7 @@ export default Model.extend({
   maximumStorageSize: attr(),
 
   storageHost: computed('storageAddress', function () {
-    return this.get('storageAddress').split('@')[1];
+    return this.storageAddress.split('@')[1];
   })
 
 });

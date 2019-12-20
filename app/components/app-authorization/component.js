@@ -7,7 +7,7 @@ export default Component.extend({
   auth: null,
 
   click () {
-    const elMeta = this.$('.metadata')[0];
+    const elMeta = this.element.querySelector('.metadata');
     const elActions = elMeta.nextElementSibling;
     elMeta.classList.toggle('open');
     elActions.classList.toggle('open');

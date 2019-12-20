@@ -17,13 +17,16 @@ section#apps {
       white-space: nowrap;
       font-size: 1.28rem;
       font-weight: normal;
-      // background: #efefef;
-      // border-right: 1px solid $lightBodyContentBoxBorder;
     }
 
     p {
       margin: 0;
       line-height: 2rem;
+    }
+
+    &.hide {
+      height: 0;
+      transition: opacity 700ms ease, height 300ms ease 700ms;
     }
 
     > div {

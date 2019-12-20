@@ -3,9 +3,8 @@
     <h2>Connected Apps</h2>
   </header>
   <div class="authorizations">
-    {{#each model as |auth|}}
-      {{app-authorization auth=auth
-                          revokeAccess=(action "revokeAccess")}}
+    {{#each this.model as |auth|}}
+      <AppAuthorization @auth={{auth}} @revokeAccess={{action "revokeAccess"}} />
     {{/each}}
   </div>
 </section>
