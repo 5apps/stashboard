@@ -57,10 +57,6 @@ section.content {
   transition: opacity 500ms ease;
 }
 
-.hidden {
-  display: none;
-}
-
 @import "components/topbar";
 @import "components/blurb";
 @import "components/buttons";

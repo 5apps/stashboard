@@ -19,9 +19,8 @@ export default Component.extend({
     revoke (auth) {
       this.element.classList.add('fade-out');
       run.later(this, function() {
-        this.element.classList.add('hidden');
         this.revokeAccess(auth);
-      }, 500);
+      }, 300);
     }
 
   }
