@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 import config from '../config/environment';
-import { isPresent } from '@ember/utils';
+import { computed } from '@ember/object';
 
 const { JSONAPIAdapter } = DS;
 
@@ -9,14 +9,14 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
 
   host: config.apiHost,
 
-  authorize (xhr) {
-    const { access_token } = this.get('session.data.authenticated');
-    debugger;
-
-    if (isPresent(access_token)) {
-      xhr.setRequestHeader('Authorization', `OAuth ${access_token}`);
+  headers: computed('session.data.authenticated.access_token', function () {
+    let headers = {};
+    if (this.session.isAuthenticated) {
+      headers['Authorization'] = `OAuth ${this.session.data.authenticated.access_token}`;
     }
-  },
+
+    return headers;
+  }),
 
   pathForType() {
     const normalizedType = this._super(...arguments);
