@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { run } from '@ember/runloop';
 
 export default Component.extend({
 
@@ -7,7 +8,7 @@ export default Component.extend({
   auth: null,
 
   click () {
-    const elMeta = this.$('.metadata')[0];
+    const elMeta = this.element.querySelector('.metadata');
     const elActions = elMeta.nextElementSibling;
     elMeta.classList.toggle('open');
     elActions.classList.toggle('open');
@@ -16,7 +17,10 @@ export default Component.extend({
   actions: {
 
     revoke (auth) {
-      this.revokeAccess(auth);
+      this.element.classList.add('fade-out');
+      run.later(this, function() {
+        this.revokeAccess(auth);
+      }, 300);
     }
 
   }

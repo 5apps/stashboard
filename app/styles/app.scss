@@ -52,6 +52,11 @@ section.content {
 
 }
 
+.fade-out {
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
 @import "components/topbar";
 @import "components/blurb";
 @import "components/buttons";

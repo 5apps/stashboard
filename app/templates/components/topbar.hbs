@@ -1,32 +1,32 @@
 <header class="topbar">
   <h1>
-    <img src="{{rootURL}}assets/brand/icon-gradient-blue.svg" alt="">
-    <span class="primary"><a href={{frontpageUrl}}>5apps</a></span>
+    <img src="{{this.rootURL}}assets/brand/icon-gradient-blue.svg" alt="" role="presentation">
+    <span class="primary"><a href={{this.frontpageUrl}}>5apps</a></span>
     <span class="secondary">Storage</span>
   </h1>
   <nav>
     <ul>
-      {{#if session.isAuthenticated}}
-        {{#if currentUser.user}}
+      {{#if this.session.isAuthenticated}}
+        {{#if this.currentUser.user}}
           <li class="account">
-            <a href="https://{{baseDomain}}/account/settings">
-              {{icons/user}} <span class="username">{{currentUser.user.username}}</span><span class="hostname">@{{currentUser.user.storageHost}}</span>
+            <a href="https://{{this.baseDomain}}/account/settings">
+              <Icons::User /> <span class="username">{{this.currentUser.user.username}}</span><span class="hostname">@{{this.currentUser.user.storageHost}}</span>
             </a>
           </li>
         {{/if}}
         <li class="logout">
           <a href="#" rel="nofollow" {{action "logout"}}>
-            {{icons/sign-out}} log out
+            <Icons::SignOut /><span class="link-text"> log out</span>
           </a>
         </li>
       {{else}}
         <li class="login">
-          {{#link-to "login"}}
-            {{icons/sign-in}} log in
-          {{/link-to}}
+          <LinkTo @route="login">
+            <Icons::SignIn /> log in
+          </LinkTo>
         </li>
         <li class="signup">
-          <a href="https://{{baseDomain}}/users/sign_up?site=storage">sign up</a>
+          <a href="https://{{this.baseDomain}}/users/sign_up?site=storage">sign up</a>
         </li>
       {{/if}}
     </ul>

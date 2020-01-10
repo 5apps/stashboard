@@ -23,7 +23,7 @@ module('Integration | Component | storage size progress', function(hooks) {
 
     const progressElement = this.element.querySelector('.progress');
 
-    assert.ok(progressElement.classList.contains('warn'));
+    assert.dom(progressElement).hasClass('warn');
   });
 
   test('it renders with a "critital" class when percentage is very high', async function(assert) {
@@ -33,7 +33,7 @@ module('Integration | Component | storage size progress', function(hooks) {
 
     const progressElement = this.element.querySelector('.progress');
 
-    assert.ok(progressElement.classList.contains('critical'));
+    assert.dom(progressElement).hasClass('critical');
   });
 
   test('it renders with a "info" class when percentage is normal', async function(assert) {
@@ -43,6 +43,6 @@ module('Integration | Component | storage size progress', function(hooks) {
 
     const progressElement = this.element.querySelector('.progress');
 
-    assert.ok(progressElement.classList.contains('info'));
+    assert.dom(progressElement).hasClass('info');
   });
 });
