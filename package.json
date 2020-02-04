@@ -16,7 +16,8 @@
     "start": "SW_DISABLED=true ember serve",
     "test": "SW_DISABLED=true ember test",
     "build": "SW_DISABLED=true ember build",
-    "build-release": "rm -rf release/* && ember build -prod --output-path release",
+    "build:staging": "rm -rf release/* && DEPLOY_TARGET=staging ember build -prod --output-path release",
+    "build:production": "rm -rf release/* && DEPLOY_TARGET=production ember build -prod --output-path release",
     "version": "npm run build-release && git add release/",
     "deploy:staging": "git push -f 5apps_staging $(git symbolic-ref --short HEAD):master",
     "deploy:production": "git push 5apps master"
