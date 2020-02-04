@@ -1,21 +1,26 @@
 {
   "name": "storage-frontend",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
-  "description": "5apps Storage Web UI",
+  "description": "5apps Storage Dashboard",
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": "AppCache Ltd.",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
   "scripts": {
-    "build": "ember build",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
-    "start": "ember serve",
-    "test": "ember test"
+    "start": "SW_DISABLED=true ember serve",
+    "test": "SW_DISABLED=true ember test",
+    "build": "SW_DISABLED=true ember build",
+    "build:staging": "rm -rf release/* && DEPLOY_TARGET=staging ember build -prod --output-path release",
+    "build:production": "rm -rf release/* && DEPLOY_TARGET=production ember build -prod --output-path release",
+    "version": "npm run build-release && git add release/",
+    "deploy:staging": "git push -f 5apps_staging $(git symbolic-ref --short HEAD):master",
+    "deploy:production": "git push 5apps master"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.1.0",
@@ -28,11 +33,6 @@
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-babel": "^7.13.0",
     "ember-cli-dependency-checker": "^3.2.0",
-    "ember-cli-deploy": "^1.0.2",
-    "ember-cli-deploy-build": "^1.1.1",
-    "ember-cli-deploy-git": "^1.3.3",
-    "ember-cli-deploy-revision-data": "^1.0.0",
-    "ember-cli-deploy-sentry": "^0.7.0",
     "ember-cli-eslint": "^5.1.0",
     "ember-cli-htmlbars": "^4.2.0",
     "ember-cli-inject-live-reload": "^2.0.1",

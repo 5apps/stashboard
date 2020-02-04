@@ -21,7 +21,7 @@ module('Acceptance | authentication', function (hooks) {
   test('visiting /apps while not authenticated redirects to OAuth provider', async function (assert) {
     await visit('/apps');
 
-    let expectedRedirectURL = 'https://5apps.dev/oauth/authorize?client_id=storage-frontend&redirect_uri=http://localhost:7357/dashboard/callback&response_type=token&scope=storage-frontend';
+    let expectedRedirectURL = 'https://5apps.dev/oauth/authorize?client_id=storage-frontend&redirect_uri=http://localhost:7357/callback&response_type=token&scope=storage-frontend';
 
     assert.equal(window.location.href, expectedRedirectURL);
   });

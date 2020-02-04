@@ -1,13 +1,12 @@
 'use strict';
 
-module.exports = function(environment) {
+const deployTarget = process.env.DEPLOY_TARGET;
 
-  const deployTarget = process.env.DEPLOY_TARGET;
+module.exports = function(environment) {
 
   let ENV = {
     modulePrefix: 'storage-frontend',
     environment,
-    rootURL: '/dashboard/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -57,20 +56,20 @@ module.exports = function(environment) {
     ENV.APP.autoboot = false;
   }
 
-  if (deployTarget === 'production') {
-    ENV.baseDomain = '5apps.com';
-    ENV.apiHost = 'https://api.5apps.com';
-
-    ENV.sentry.development = false;
-    ENV.sentry.ravenOptions.environment = 'production';
-  }
-
   if (deployTarget === 'staging') {
     ENV.baseDomain = '5stage.com';
     ENV.apiHost = 'https://api.5stage.com';
 
     ENV.sentry.development = false;
     ENV.sentry.ravenOptions.environment = 'staging';
+  }
+
+  if (deployTarget === 'production') {
+    ENV.baseDomain = '5apps.com';
+    ENV.apiHost = 'https://api.5apps.com';
+
+    ENV.sentry.development = false;
+    ENV.sentry.ravenOptions.environment = 'production';
   }
 
   return ENV;
