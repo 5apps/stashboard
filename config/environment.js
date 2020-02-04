@@ -7,7 +7,6 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'storage-frontend',
     environment,
-    rootURL: '/dashboard/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
