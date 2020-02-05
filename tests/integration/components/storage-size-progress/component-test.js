@@ -11,9 +11,9 @@ module('Integration | Component | storage size progress', function(hooks) {
 
     await render(hbs`{{storage-size-progress percent=storageSizeInPercent}}`);
 
-    const progressElement = this.$('.progress');
+    const progressElement = this.element.querySelector('.progress');
 
-    assert.equal(progressElement[0].style.width, '83%');
+    assert.equal(progressElement.style.width, '83%');
   });
 
   test('it renders with a "warning" class when percentage is high', async function(assert) {
@@ -21,9 +21,9 @@ module('Integration | Component | storage size progress', function(hooks) {
 
     await render(hbs`{{storage-size-progress percent=storageSizeInPercent}}`);
 
-    const progressElement = this.$('.progress');
+    const progressElement = this.element.querySelector('.progress');
 
-    assert.ok(progressElement.hasClass('warn'));
+    assert.dom(progressElement).hasClass('warn');
   });
 
   test('it renders with a "critital" class when percentage is very high', async function(assert) {
@@ -31,9 +31,9 @@ module('Integration | Component | storage size progress', function(hooks) {
 
     await render(hbs`{{storage-size-progress percent=storageSizeInPercent}}`);
 
-    const progressElement = this.$('.progress');
+    const progressElement = this.element.querySelector('.progress');
 
-    assert.ok(progressElement.hasClass('critical'));
+    assert.dom(progressElement).hasClass('critical');
   });
 
   test('it renders with a "info" class when percentage is normal', async function(assert) {
@@ -41,8 +41,8 @@ module('Integration | Component | storage size progress', function(hooks) {
 
     await render(hbs`{{storage-size-progress percent=storageSizeInPercent}}`);
 
-    const progressElement = this.$('.progress');
+    const progressElement = this.element.querySelector('.progress');
 
-    assert.ok(progressElement.hasClass('info'));
+    assert.dom(progressElement).hasClass('info');
   });
 });

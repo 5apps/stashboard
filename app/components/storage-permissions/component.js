@@ -6,7 +6,7 @@ export default Component.extend({
   permissions: null,
 
   parsedPermissions: computed('permissions.[]', function() {
-    return this.get('permissions').map((permission) => {
+    return this.permissions.map((permission) => {
       const split = permission.split(':');
 
       return {

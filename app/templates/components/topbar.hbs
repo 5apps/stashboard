@@ -1,0 +1,34 @@
+<header class="topbar">
+  <h1>
+    <img src="{{this.rootURL}}assets/brand/icon-gradient-blue.svg" alt="" role="presentation">
+    <span class="primary"><a href={{this.frontpageUrl}}>5apps</a></span>
+    <span class="secondary">Storage</span>
+  </h1>
+  <nav>
+    <ul>
+      {{#if this.session.isAuthenticated}}
+        {{#if this.currentUser.user}}
+          <li class="account">
+            <a href="https://{{this.baseDomain}}/account/settings">
+              <Icons::User /> <span class="username">{{this.currentUser.user.username}}</span><span class="hostname">@{{this.currentUser.user.storageHost}}</span>
+            </a>
+          </li>
+        {{/if}}
+        <li class="logout">
+          <a href="#" rel="nofollow" {{action "logout"}}>
+            <Icons::SignOut /><span class="link-text"> log out</span>
+          </a>
+        </li>
+      {{else}}
+        <li class="login">
+          <LinkTo @route="login">
+            <Icons::SignIn /> log in
+          </LinkTo>
+        </li>
+        <li class="signup">
+          <a href="https://{{this.baseDomain}}/users/sign_up?site=storage">sign up</a>
+        </li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>

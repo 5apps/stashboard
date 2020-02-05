@@ -1,7 +1,6 @@
 # storage-frontend
 
-This is the frontend app for managing a user's remoteStorage
-authorizations.
+A dashboard for managing one's remoteStorage authorizations.
 
 ## Prerequisites
 
@@ -31,39 +30,17 @@ You will need the following things properly installed on your computer.
 
 ### Linting
 
+* `npm run lint:hbs`
 * `npm run lint:js`
 * `npm run lint:js -- --fix`
 
 ### Deploying
 
-* `ember deploy <deploy target>`
+* `npm run deploy:staging` or `npm run deploy:production`
 
-The deploy target can be either `development`, `staging` or
-`production`, with `production` being the default.
+## FIXME Re-add Sentry support
 
 To create new Sentry releases and upload sourcemaps during deploy,
 you'll need to copy the `.env.example` file as `.env` and add your token
 to it. The token can be created at https://sentry.io/api/ with the scope
 "project:releases".
-
-#### Deploying to the Vagrant development box
-
-To be able to deploy to development, you'll need to create a Deploy app
-on 5apps.dev under the "5apps" user, called "storage-frontend" with the
-domain "storage-frontend.5apps.dev".
-
-After creating the app, you'll have to push a first commit to the app's
-deploy repo with just a basic index.html file, because `ember-cli-deploy` will
-try to fetch the repo first and fail if it's empty.
-
-#### Reusing the previous build for deployment
-
-In cases when the last deployment didn't work, e.g. because of network
-issues, you don't need to do the whole build step again. For this you
-can define an environment variable to reuse the build from the previous
-deployment:
-
-    EMBER_CLI_DEPLOY_REUSE_BUILD=true ember deploy <deploy target>
-
-
-

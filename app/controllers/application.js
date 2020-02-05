@@ -9,13 +9,4 @@ export default Controller.extend({
   baseDomain: config.baseDomain,
   frontpageUrl: 'https://'+config.baseDomain,
 
-  userTriggeredSignout: false,
-
-  actions: {
-    logout () {
-      this.set('userTriggeredSignout', true);
-      this.get('session').invalidate();
-    }
-  }
-
 });

@@ -1,13 +1,13 @@
-{{#each parsedPermissions as |permission|}}
+{{#each this.parsedPermissions as |permission|}}
   <span class="permission">
     {{#if permission.root}}
       <span class="directory root">
-        {{partial "icons/asterisk"}}
-        all categories and files
+        <Icons::asterisk />
+        all folders and files
       </span>
     {{else}}
       <span class="directory">
-        {{partial "icons/folder-alt"}}
+        <Icons::folder-alt />
         {{permission.directory}}
       </span>
     {{/if}}

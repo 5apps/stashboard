@@ -1,6 +1,0 @@
-app:
-  build:
-    image: 5apps/storage-frontend
-    dockerfile: Dockerfile
-  cached: true
-

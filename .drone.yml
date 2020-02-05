@@ -1,0 +1,6 @@
+pipeline:
+  build:
+    image: danlynn/ember-cli:3.0.0
+    commands:
+      - npm install
+      - npm test

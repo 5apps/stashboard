@@ -16,19 +16,19 @@ export default Model.extend({
   createdAt: attr('date'),
 
   expireAtDatetime: computed('expireAt', function() {
-    return moment(this.get('expireAt')).format('YYYY-MM-DD[T]HH:mm');
+    return moment(this.expireAt).format('YYYY-MM-DD[T]HH:mm');
   }),
 
   expireAtDateTitle: computed('expireAt', function() {
-    return moment(this.get('expireAt')).format('YYYY-MM-DD [at] HH:mm');
+    return moment(this.expireAt).format('YYYY-MM-DD [at] HH:mm');
   }),
 
   createdAtDatetime: computed('createdAt', function() {
-    return moment(this.get('createdAt')).format('YYYY-MM-DD[T]HH:mm');
+    return moment(this.createdAt).format('YYYY-MM-DD[T]HH:mm');
   }),
 
   createdAtDateTitle: computed('createdAt', function() {
-    return moment(this.get('createdAt')).format('YYYY-MM-DD [at] HH:mm');
+    return moment(this.createdAt).format('YYYY-MM-DD [at] HH:mm');
   })
 
 });

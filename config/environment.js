@@ -1,18 +1,18 @@
 'use strict';
 
-module.exports = function(environment) {
+const deployTarget = process.env.DEPLOY_TARGET;
 
-  const deployTarget = process.env.DEPLOY_TARGET;
+module.exports = function(environment) {
 
   let ENV = {
     modulePrefix: 'storage-frontend',
     environment,
-    rootURL: '/account/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
+        // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
@@ -57,20 +57,20 @@ module.exports = function(environment) {
     ENV.APP.autoboot = false;
   }
 
-  if (deployTarget === 'production') {
-    ENV.baseDomain = '5apps.com';
-    ENV.apiHost = 'https://api.5apps.com';
-
-    ENV.sentry.development = false;
-    ENV.sentry.ravenOptions.environment = 'production';
-  }
-
   if (deployTarget === 'staging') {
     ENV.baseDomain = '5stage.com';
     ENV.apiHost = 'https://api.5stage.com';
 
     ENV.sentry.development = false;
     ENV.sentry.ravenOptions.environment = 'staging';
+  }
+
+  if (deployTarget === 'production') {
+    ENV.baseDomain = '5apps.com';
+    ENV.apiHost = 'https://api.5apps.com';
+
+    ENV.sentry.development = false;
+    ENV.sentry.ravenOptions.environment = 'production';
   }
 
   return ENV;

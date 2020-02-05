@@ -7,7 +7,7 @@ export default Route.extend(UnauthenticatedRouteMixin, {
   session: service(),
 
   redirect() {
-    this.get('session').authenticateWithImplicitGrant();
+    this.session.authenticateWithImplicitGrant();
   }
 
 });

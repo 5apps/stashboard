@@ -3,14 +3,14 @@
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
-  src: url('/account/assets/fonts/Abel-regular/Abel-regular.eot');
-  src: url('/account/assets/fonts/Abel-regular/Abel-regular.eot?#iefix') format('embedded-opentype'),
+  src: url('/assets/fonts/Abel-regular/Abel-regular.eot');
+  src: url('/assets/fonts/Abel-regular/Abel-regular.eot?#iefix') format('embedded-opentype'),
   local('Abel'),
   local('Abel-regular'),
-  url('/account/assets/fonts/Abel-regular/Abel-regular.woff2') format('woff2'),
-  url('/account/assets/fonts/Abel-regular/Abel-regular.woff') format('woff'),
-  url('/account/assets/fonts/Abel-regular/Abel-regular.ttf') format('truetype'),
-  url('/account/assets/fonts/Abel-regular/Abel-regular.svg#Abel') format('svg');
+  url('/assets/fonts/Abel-regular/Abel-regular.woff2') format('woff2'),
+  url('/assets/fonts/Abel-regular/Abel-regular.woff') format('woff'),
+  url('/assets/fonts/Abel-regular/Abel-regular.ttf') format('truetype'),
+  url('/assets/fonts/Abel-regular/Abel-regular.svg#Abel') format('svg');
 }
 
 @font-face {
@@ -18,14 +18,14 @@
   font-weight: 300;
   font-style: normal;
   font-display: fallback;
-  src: url('/account/assets/fonts/Open-Sans-300/Open-Sans-300.eot');
-  src: url('/account/assets/fonts/Open-Sans-300/Open-Sans-300.eot?#iefix') format('embedded-opentype'),
+  src: url('/assets/fonts/Open-Sans-300/Open-Sans-300.eot');
+  src: url('/assets/fonts/Open-Sans-300/Open-Sans-300.eot?#iefix') format('embedded-opentype'),
   local('Open Sans Light'),
   local('Open-Sans-300'),
-  url('/account/assets/fonts/Open-Sans-300/Open-Sans-300.woff2') format('woff2'),
-  url('/account/assets/fonts/Open-Sans-300/Open-Sans-300.woff') format('woff'),
-  url('/account/assets/fonts/Open-Sans-300/Open-Sans-300.ttf') format('truetype'),
-  url('/account/assets/fonts/Open-Sans-300/Open-Sans-300.svg#OpenSans') format('svg');
+  url('/assets/fonts/Open-Sans-300/Open-Sans-300.woff2') format('woff2'),
+  url('/assets/fonts/Open-Sans-300/Open-Sans-300.woff') format('woff'),
+  url('/assets/fonts/Open-Sans-300/Open-Sans-300.ttf') format('truetype'),
+  url('/assets/fonts/Open-Sans-300/Open-Sans-300.svg#OpenSans') format('svg');
 }
 
 @font-face {
@@ -33,14 +33,14 @@
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
-  src: url('/account/assets/fonts/Open-Sans-regular/Open-Sans-regular.eot');
-  src: url('/account/assets/fonts/Open-Sans-regular/Open-Sans-regular.eot?#iefix') format('embedded-opentype'),
+  src: url('/assets/fonts/Open-Sans-regular/Open-Sans-regular.eot');
+  src: url('/assets/fonts/Open-Sans-regular/Open-Sans-regular.eot?#iefix') format('embedded-opentype'),
   local('Open Sans'),
   local('Open-Sans-regular'),
-  url('/account/assets/fonts/Open-Sans-regular/Open-Sans-regular.woff2') format('woff2'),
-  url('/account/assets/fonts/Open-Sans-regular/Open-Sans-regular.woff') format('woff'),
-  url('/account/assets/fonts/Open-Sans-regular/Open-Sans-regular.ttf') format('truetype'),
-  url('/account/assets/fonts/Open-Sans-regular/Open-Sans-regular.svg#OpenSans') format('svg');
+  url('/assets/fonts/Open-Sans-regular/Open-Sans-regular.woff2') format('woff2'),
+  url('/assets/fonts/Open-Sans-regular/Open-Sans-regular.woff') format('woff'),
+  url('/assets/fonts/Open-Sans-regular/Open-Sans-regular.ttf') format('truetype'),
+  url('/assets/fonts/Open-Sans-regular/Open-Sans-regular.svg#OpenSans') format('svg');
 }
 
 @font-face {
@@ -48,14 +48,14 @@
   font-weight: 700;
   font-style: normal;
   font-display: fallback;
-  src: url('/account/assets/fonts/Open-Sans-700/Open-Sans-700.eot');
-  src: url('/account/assets/fonts/Open-Sans-700/Open-Sans-700.eot?#iefix') format('embedded-opentype'),
+  src: url('/assets/fonts/Open-Sans-700/Open-Sans-700.eot');
+  src: url('/assets/fonts/Open-Sans-700/Open-Sans-700.eot?#iefix') format('embedded-opentype'),
   local('Open Sans Bold'),
   local('Open-Sans-700'),
-  url('/account/assets/fonts/Open-Sans-700/Open-Sans-700.woff2') format('woff2'),
-  url('/account/assets/fonts/Open-Sans-700/Open-Sans-700.woff') format('woff'),
-  url('/account/assets/fonts/Open-Sans-700/Open-Sans-700.ttf') format('truetype'),
-  url('/account/assets/fonts/Open-Sans-700/Open-Sans-700.svg#OpenSans') format('svg');
+  url('/assets/fonts/Open-Sans-700/Open-Sans-700.woff2') format('woff2'),
+  url('/assets/fonts/Open-Sans-700/Open-Sans-700.woff') format('woff'),
+  url('/assets/fonts/Open-Sans-700/Open-Sans-700.ttf') format('truetype'),
+  url('/assets/fonts/Open-Sans-700/Open-Sans-700.svg#OpenSans') format('svg');
 }
 
 $headlineFontFamily: "Abel", sans-serif;

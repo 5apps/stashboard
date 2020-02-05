@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import { computed } from '@ember/object';
 
 const { Model, attr } = DS;
 
@@ -14,7 +15,11 @@ export default Model.extend({
   storageAddress: attr(),
   storageSize: attr(),
   storageSizeInPercent: attr(),
-  maximumStorageSize: attr()
+  maximumStorageSize: attr(),
+
+  storageHost: computed('storageAddress', function () {
+    return this.storageAddress.split('@')[1];
+  })
 
 });
 

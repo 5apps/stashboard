@@ -1,7 +1,10 @@
 import SessionService from 'ember-simple-auth/services/session';
 import config from '../config/environment';
+import window from 'ember-window-mock';
 
 export default SessionService.extend({
+
+  userTriggeredSignout: false,
 
   authenticateWithImplicitGrant() {
     const clientId = 'storage-frontend';
