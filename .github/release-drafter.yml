@@ -1,0 +1,19 @@
+categories:
+  - title: 'Features'
+    labels:
+      - 'feature'
+      - 'enhancement'
+      - 'design'
+  - title: 'Bug Fixes'
+    labels:
+      - 'bug'
+  - title: 'Maintenance'
+    labels:
+      - 'chore'
+      - 'dev environment'
+exclude-labels:
+  - 'skip changelog'
+template: |
+  ## Changes
+
+  $CHANGES
