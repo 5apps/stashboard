@@ -8,7 +8,7 @@ export default SessionService.extend({
 
   authenticateWithImplicitGrant() {
     const clientId = 'storage-frontend';
-    const redirectURI = `${window.location.origin}/callback`;
+    const redirectURI = `${window.location.origin}${config.rootURL}callback`;
     const responseType = 'token';
     const scope = 'storage-frontend';
 

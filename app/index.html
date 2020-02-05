@@ -4,22 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>5apps Storage</title>
-    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="{{rootURL}}favicon.ico" rel="shortcut icon" type="image/x-icon">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for "head"}}
 
-    <link integrity="" rel="stylesheet" href="/assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="/assets/storage-frontend.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/storage-frontend.css">
 
     {{content-for "head-footer"}}
   </head>
   <body class="storage">
     {{content-for "body"}}
 
-    <script src="/assets/vendor.js"></script>
-    <script src="/assets/storage-frontend.js"></script>
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/storage-frontend.js"></script>
 
     {{content-for "body-footer"}}
   </body>
