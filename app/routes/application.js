@@ -28,7 +28,14 @@ export default Route.extend(ApplicationRouteMixin, {
   },
 
   _loadCurrentUser() {
-    return this.currentUser.load().catch(() => this.session.invalidate());
+    return this.currentUser.load().catch((response) => {
+      if (response.errors[0].status === '401') {
+        this.session.invalidate();
+      } else {
+        alert("There was an error loading your data. Let's try again.");
+        this._loadCurrentUser();
+      }
+    });
   }
 
 });
