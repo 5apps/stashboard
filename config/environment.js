@@ -2,6 +2,15 @@
 
 const deployTarget = process.env.DEPLOY_TARGET;
 
+if (deployTarget) {
+  const path = require('path');
+  const envPath = path.resolve(process.cwd(), `.env.${deployTarget}`);
+  require('dotenv').config({ path: envPath });
+}
+
+// This will not override deploy-target-specific variables
+require('dotenv').config();
+
 module.exports = function(environment) {
 
   let ENV = {
@@ -25,11 +34,11 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    baseDomain: '5apps.dev',
-    apiHost: 'https://api.5apps.dev',
+    baseDomain: process.env.BASE_DOMAIN,
+    apiHost: process.env.API_HOST,
 
     sentry: {
-      dsn: 'https://97e0666aac54498ba23adef4993055d3@sentry.io/1188030',
+      dsn: process.env.SENTRY_DSN,
       development: true,
       ravenOptions: {}
     }
@@ -58,17 +67,11 @@ module.exports = function(environment) {
   }
 
   if (deployTarget === 'staging') {
-    ENV.baseDomain = '5stage.com';
-    ENV.apiHost = 'https://api.5stage.com';
-
     ENV.sentry.development = false;
     ENV.sentry.ravenOptions.environment = 'staging';
   }
 
   if (deployTarget === 'production') {
-    ENV.baseDomain = '5apps.com';
-    ENV.apiHost = 'https://api.5apps.com';
-
     ENV.sentry.development = false;
     ENV.sentry.ravenOptions.environment = 'production';
   }
