@@ -1,6 +1,7 @@
 'use strict';
 
 const deployTarget = process.env.DEPLOY_TARGET;
+const appVersion = require('../package.json').version;
 
 if (deployTarget) {
   const path = require('path');
@@ -40,7 +41,9 @@ module.exports = function(environment) {
     sentry: {
       dsn: process.env.SENTRY_DSN,
       development: true,
-      ravenOptions: {}
+      ravenOptions: {
+        release: appVersion
+      }
     }
   };
 
