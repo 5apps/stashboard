@@ -66,7 +66,7 @@ module.exports = function(environment) {
     ENV.APP.autoboot = false;
 
     ENV.baseDomain = 'example.com';
-    ENV.apiHost = 'api.example.com';
+    ENV.apiHost = 'https://api.example.com';
   }
 
   if (deployTarget === 'staging') {
