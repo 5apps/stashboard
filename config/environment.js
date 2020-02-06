@@ -1,6 +1,9 @@
 'use strict';
 
+const execSync = require('child_process').execSync;
+
 const deployTarget = process.env.DEPLOY_TARGET;
+const gitRevision = execSync('git rev-parse HEAD').toString().substring(0, 10);
 
 module.exports = function(environment) {
 
@@ -31,7 +34,9 @@ module.exports = function(environment) {
     sentry: {
       dsn: 'https://97e0666aac54498ba23adef4993055d3@sentry.io/1188030',
       development: true,
-      ravenOptions: {}
+      ravenOptions: {
+        release: gitRevision
+      }
     }
   };
 
