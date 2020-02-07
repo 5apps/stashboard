@@ -1,0 +1,73 @@
+.ember-basic-dropdown-content {
+  min-width: 160px;
+  background-color: #fff;
+  border: 1px solid $lightBodyContentBoxBorder;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+
+  ul {
+    li {
+      border-bottom: 1px solid $lightBodyContentBoxBorder;
+      &:last-child { border-bottom: none; }
+    }
+  }
+
+  a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: $darkGrey;
+    transition: color 0.1s linear;
+    cursor: pointer;
+
+    svg {
+      height: 1rem;
+      width: auto;
+      vertical-align: middle;
+      margin-top: -0.1em;
+      margin-right: 0.3rem;
+    }
+
+    &:hover, &:active {
+      color: $shadedShinyBlue;
+      background-color: $lightBodyBackground;
+    }
+  }
+}
+
+@keyframes drop-fade-below {
+  0%   {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes drop-fade-above {
+  0%   {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.slide-fade {
+  will-change: transform, opacity;
+  &.ember-basic-dropdown-content--below.ember-basic-dropdown--transitioning-in {
+    animation: drop-fade-below .15s;
+  }
+  &.ember-basic-dropdown-content--below.ember-basic-dropdown--transitioning-out {
+    animation: drop-fade-below .15s reverse;
+  }
+  &.ember-basic-dropdown-content--above.ember-basic-dropdown--transitioning-in {
+    animation: drop-fade-above .15s;
+  }
+  &.ember-basic-dropdown-content--above.ember-basic-dropdown--transitioning-out {
+    animation: drop-fade-above .15s reverse;
+  }
+}

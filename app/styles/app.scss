@@ -58,6 +58,7 @@ section.content {
   transition: opacity 500ms ease;
 }
 
+@import "components/ember-basic-dropdown";
 @import "components/topbar";
 @import "components/blurb";
 @import "components/buttons";

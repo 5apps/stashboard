@@ -39,14 +39,15 @@ header.topbar {
 
     ul {
       li {
-        display: inline;
+        display: inline-block;
 
-        a {
+        a, .ember-basic-dropdown-trigger {
           display: inline-block;
           padding: 0 1rem;
           text-decoration: none;
           color: $greyTextOnDarkGrey;
           transition: color 0.1s linear;
+          cursor: pointer;
 
           svg {
             height: 1rem;
@@ -54,21 +55,10 @@ header.topbar {
             vertical-align: middle;
             margin-top: -0.2rem;
             margin-right: 0.3rem;
-
-            path {
-              fill: $greyTextOnDarkGrey;
-              transition: fill 0.1s linear;
-            }
           }
 
-          &:hover, &:active {
+          &:hover, &:active, &[aria-expanded=true] {
             color: $shinyBlue;
-
-            svg {
-              path {
-                fill: $shinyBlue;
-              }
-            }
           }
         }
       }
@@ -101,21 +91,6 @@ header.topbar {
             }
           }
         }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 420px) {
-  header.topbar {
-    h1 {
-      span.secondary {
-        display: none;
-      }
-    }
-    nav {
-      span.link-text {
-        display: none;
       }
     }
   }

@@ -8,21 +8,63 @@
     <ul>
       {{#if this.session.isAuthenticated}}
         {{#if this.currentUser.user}}
+          <li>
+            <BasicDropdown @horizontalPosition="left" as |dd|>
+              <dd.Trigger>
+                <IconLifeBuoy /> <span class="help">Help</span>
+              </dd.Trigger>
+              <dd.Content class="slide-fade">
+                <ul>
+                  <li>
+                    <a href="https://5apps.tenderapp.com/kb/storage">
+                      <IconHelpCircle /> Knowledge Base
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://5apps.tenderapp.com/discussion/new">
+                      <IconMail /> Support
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://community.remotestorage.io/categories">
+                      <IconMessageCircle /> remoteStorage Community
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://status.5apps.com/">
+                      <IconZap /> System Status
+                    </a>
+                  </li>
+                </ul>
+              </dd.Content>
+            </BasicDropdown>
+          </li>
           <li class="account">
-            <a href="https://{{this.baseDomain}}/account/settings">
-              <Icons::User /> <span class="username">{{this.currentUser.user.username}}</span><span class="hostname">@{{this.currentUser.user.storageHost}}</span>
-            </a>
+            <BasicDropdown @horizontalPosition="right" as |dd|>
+              <dd.Trigger>
+                <IconUser /> <span class="username">{{this.currentUser.user.username}}</span><span class="hostname">@{{this.currentUser.user.storageHost}}</span>
+              </dd.Trigger>
+              <dd.Content class="slide-fade">
+                <ul>
+                  <li>
+                    <a href="https://{{this.baseDomain}}/account/settings">
+                      <IconSettings /> Account
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" rel="nofollow" {{action "logout"}}>
+                      <IconLogOut /> Log out
+                    </a>
+                  </li>
+                </ul>
+              </dd.Content>
+            </BasicDropdown>
           </li>
         {{/if}}
-        <li class="logout">
-          <a href="#" rel="nofollow" {{action "logout"}}>
-            <Icons::SignOut /><span class="link-text"> log out</span>
-          </a>
-        </li>
       {{else}}
         <li class="login">
           <LinkTo @route="login">
-            <Icons::SignIn /> log in
+            <IconLogIn /> log in
           </LinkTo>
         </li>
         <li class="signup">
