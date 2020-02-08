@@ -34,6 +34,7 @@ header.topbar {
   nav {
     display: block;
     float: right;
+    margin-right: 0.4rem;
     width: auto;
     font-size: 1rem;
 
@@ -43,14 +44,14 @@ header.topbar {
 
         a, .ember-basic-dropdown-trigger {
           display: inline-block;
-          padding: 0 1rem;
+          padding: 0 0.6rem;
           text-decoration: none;
           color: $greyTextOnDarkGrey;
           transition: color 0.1s linear;
           cursor: pointer;
 
           svg {
-            height: 1.2rem;
+            height: 1.4rem;
             width: auto;
             vertical-align: middle;
             margin-top: -0.2rem;
@@ -75,22 +76,6 @@ header.topbar {
 
       span.secondary {
         color: #fff;
-      }
-    }
-
-    nav {
-      ul {
-        li {
-          &:last-of-type a {
-            padding-right: 1rem;
-          }
-
-          &.account {
-            .hostname {
-              display: none;
-            }
-          }
-        }
       }
     }
   }
