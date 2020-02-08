@@ -3,6 +3,9 @@
 @import "colors";
 @import "fonts";
 @import "mixins";
+@import "ember-basic-dropdown";
+
+$topbarHeight: 4rem;
 
 html {
   font-size: 14px;
@@ -57,6 +60,7 @@ section.content {
   transition: opacity 500ms ease;
 }
 
+@import "components/ember-basic-dropdown";
 @import "components/topbar";
 @import "components/blurb";
 @import "components/buttons";
