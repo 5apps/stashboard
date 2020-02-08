@@ -11,9 +11,12 @@
           <li>
             <BasicDropdown @horizontalPosition="right" as |dd|>
               <dd.Trigger>
-                <IconLifeBuoy /> <span class="help">Help</span>
+                <IconLifeBuoy />
               </dd.Trigger>
               <dd.Content class="slide-fade">
+                <div class="header">
+                  <h4>Help</h4>
+                </div>
                 <ul>
                   <li>
                     <a href="https://5apps.tenderapp.com/kb/storage"
@@ -46,9 +49,15 @@
           <li class="account">
             <BasicDropdown @horizontalPosition="right" as |dd|>
               <dd.Trigger>
-                <IconUser /> <span class="username">{{this.currentUser.user.username}}</span><span class="hostname">@{{this.currentUser.user.storageHost}}</span>
+                <IconUser />
               </dd.Trigger>
               <dd.Content class="slide-fade">
+                <div class="header">
+                  <h4 class="small">User address</h4>
+                  <p>
+                    <span class="username">{{this.currentUser.user.username}}</span><span class="hostname">@{{this.currentUser.user.storageHost}}</span>
+                  </p>
+                </div>
                 <ul>
                   <li>
                     <a href="https://{{this.baseDomain}}/account/settings"
