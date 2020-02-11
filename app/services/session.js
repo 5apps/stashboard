@@ -24,14 +24,26 @@ export default SessionService.extend({
   },
 
   authenticate (authenticator, hash) {
-    // don't persist session data when user didn't select "remember me"
-    if (hash && hash.state === 'no-remember') {
-      const owner = getOwner(this);
-      const store = SessionStorage.create(owner.ownerInjection(), { _isFastBoot: false });
-      this.session.set('store', store);
+    // check for persist-session param, sent when user checked "remember me" on sign-in
+    if (hash && hash.state) {
+      let state = {};
+      try {
+        state = JSON.parse(atob(hash.state)); // parse Base64 encoded JSON
+      } catch (e) { /* ignore */ }
+      if (!state['persist-session']) {
+        this.switchToNonPersistenSessionStorage();
+      }
+    } else {
+      this.switchToNonPersistenSessionStorage();
     }
 
     return this._super(...arguments);
+  },
+
+  switchToNonPersistenSessionStorage () {
+    const owner = getOwner(this);
+    const store = SessionStorage.create(owner.ownerInjection(), { _isFastBoot: false });
+    this.session.set('store', store);
   }
 
 });
