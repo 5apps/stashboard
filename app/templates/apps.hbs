@@ -4,7 +4,7 @@
   </header>
   <div class="authorizations">
     {{#each this.model as |auth|}}
-      <AppAuthorization @auth={{auth}} @revokeAccess={{action "revokeAccess"}} />
+      <AppAuthorization @auth={{auth}} @revokeAccess={{this.revokeAccess}} />
     {{/each}}
   </div>
 </section>

@@ -1,17 +1,19 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
-import { computed } from '@ember/object';
+import { action, computed } from '@ember/object';
 import { isEmpty } from '@ember/utils';
 
-export default Controller.extend({
+export default class AppsController extends Controller {
 
-  currentUser: service(),
+  @service currentUser;
 
-  appsCount: computed('model.[]', function() {
+  @computed('model.[]')
+  get appsCount () {
     return this.get('model.length');
-  }),
+  }
 
-  categoriesCount: computed('model.@each.permissions', function() {
+  @computed('model.@each.permissions')
+  get categoriesCount () {
     const permissions = this.model.map((auth) => {
       return auth.get('permissions').map((permission) => {
         return permission.split(':')[0];
@@ -19,18 +21,15 @@ export default Controller.extend({
     });
 
     return [].concat(...permissions).uniq().length;
-  }),
-
-  actions: {
-
-    revokeAccess (auth) {
-      auth.destroyRecord().then(() => {
-        if (isEmpty(this.model)) {
-          this.transitionToRoute('welcome');
-        }
-      });
-    }
-
   }
 
-});
+  @action
+  revokeAccess (auth) {
+    auth.destroyRecord().then(() => {
+      if (isEmpty(this.model)) {
+        this.transitionToRoute('welcome');
+      }
+    });
+  }
+
+}
