@@ -1,6 +1,6 @@
 <header class="topbar">
   <h1>
-    <img src="{{this.rootURL}}assets/brand/icon-gradient-blue.svg" alt="" role="presentation">
+    <img src="{{this.config.rootURL}}/assets/brand/icon-gradient-blue.svg" alt="" role="presentation">
     <span class="primary"><a href={{this.frontpageUrl}}>5apps</a></span>
     <span class="secondary">Storage</span>
   </h1>
@@ -66,7 +66,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" rel="nofollow" {{action "logout"}}>
+                    <a href="#" rel="nofollow" {{on "click" (fn this.logout)}}>
                       <IconLogOut /> Log out
                     </a>
                   </li>
