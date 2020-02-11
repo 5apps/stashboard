@@ -1,25 +1,29 @@
-<div class="icon">
-  <Icons::BrandIconFlat />
-</div>
-<div class="app-name">
-  <h4>
-    {{this.auth.appName}}
-  </h4>
-  <p>
-    <a href={{this.auth.launchUrl}} class="app_url" target="_blank" rel="noopener noreferrer">
-      {{this.auth.clientId}}
-    </a>
-  </p>
-</div>
-<div class="metadata">
-  <p>
-    {{storage-permissions permissions=this.auth.permissions}}
-  </p>
-  <p class="created-at">
-    Approved
-    <time datetime={{this.auth.createdAtDatetime}} title={{this.auth.createdAtDateTitle}}>{{moment-from-now this.auth.createdAt}}</time>{{#if this.auth.expireAt}}, expires <time datetime={{this.auth.expireAtDatetime}} title={{this.auth.expireAtDateTitle}}>{{moment-from-now this.auth.expireAt}}</time>{{/if}}
-  </p>
-</div>
-<div class="actions">
-  <a href="" {{action "revoke" this.auth}} class="danger button">Revoke access</a>
+<div class="auth" {{on "click" (fn this.toggleOpenClass)}}>
+  <div class="icon">
+    <Icons::BrandIconFlat />
+  </div>
+  <div class="app-name">
+    <h4>
+      {{@auth.appName}}
+    </h4>
+    <p>
+      <a href={{@auth.launchUrl}} class="app_url" target="_blank" rel="noopener noreferrer">
+        {{@auth.clientId}}
+      </a>
+    </p>
+  </div>
+  <div class="metadata">
+    <p>
+      <StoragePermissions @permissions={{@auth.permissions}} />
+    </p>
+    <p class="created-at">
+      Approved
+      <time datetime={{@auth.createdAtDatetime}} title={{@auth.createdAtDateTitle}}>{{moment-from-now @auth.createdAt}}</time>{{#if @auth.expireAt}}, expires <time datetime={{@auth.expireAtDatetime}} title={{@auth.expireAtDateTitle}}>{{moment-from-now @auth.expireAt}}</time>{{/if}}
+    </p>
+  </div>
+  <div class="actions">
+    <button type="button" {{on "click" (fn this.revoke)}} class="danger button">
+      Revoke access
+    </button>
+  </div>
 </div>
