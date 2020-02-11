@@ -31,16 +31,16 @@ export default SessionService.extend({
         state = JSON.parse(atob(hash.state)); // parse Base64 encoded JSON
       } catch (e) { /* ignore */ }
       if (!state['persist-session']) {
-        this.switchToNonPersistenSessionStorage();
+        this.switchToNonPersistentSessionStorage();
       }
     } else {
-      this.switchToNonPersistenSessionStorage();
+      this.switchToNonPersistentSessionStorage();
     }
 
     return this._super(...arguments);
   },
 
-  switchToNonPersistenSessionStorage () {
+  switchToNonPersistentSessionStorage () {
     const owner = getOwner(this);
     const store = SessionStorage.create(owner.ownerInjection(), { _isFastBoot: false });
     this.session.set('store', store);
