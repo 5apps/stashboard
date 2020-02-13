@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="85.6358mm" height="84.0005mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 954 936"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil6 {fill:none}
+    .fil1 {fill:#58A1F3;fill-rule:nonzero}
+    .fil3 {fill:url(#id0)}
+    .fil2 {fill:url(#id1)}
+    .fil5 {fill:url(#id2)}
+    .fil4 {fill:url(#id3)}
+    .fil0 {fill:url(#id4)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="90.428" y1="551.661" x2="340.945" y2="752.076">
+   <stop offset="0" style="stop-opacity:1; stop-color:#2082EF"/>
+   <stop offset="0.678431" style="stop-opacity:1; stop-color:#61A6F4"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#A3CBF9"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="284.947" y1="133.148" x2="164.109" y2="442.612">
+   <stop offset="0" style="stop-opacity:1; stop-color:#2082EF"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#A3CBF9"/>
+  </linearGradient>
+  <linearGradient id="id2" gradientUnits="userSpaceOnUse" xlink:href="#id1" x1="818.403" y1="678.393" x2="738.828" y2="301.142">
+  </linearGradient>
+  <linearGradient id="id3" gradientUnits="userSpaceOnUse" xlink:href="#id1" x1="402.838" y1="861.124" x2="744.722" y2="669.552">
+  </linearGradient>
+  <linearGradient id="id4" gradientUnits="userSpaceOnUse" xlink:href="#id1" x1="762.405" y1="203.882" x2="388.102" y2="189.147">
+  </linearGradient>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M912 562l0 0c0,0 104,-142 -15,-318 -85,-125 -274,-143 -378,-143 -43,0 -71,3 -71,3l0 0c0,0 -116,70 -106,167 -4,-1 -7,0 -7,0l-9 24c-1,1 23,-2 33,-3 0,0 0,0 1,0 5,0 12,-1 20,-1 136,-8 620,-19 523,216 0,0 9,36 9,55z"/>
+  <g>
+   <path id="path1272" class="fil1" d="M546 101c-58,-1 -98,3 -98,3 0,0 -116,70 -106,167 -4,-1 -7,0 -7,0l-9 24c-1,1 23,-2 33,-3 0,0 0,0 1,0 5,0 12,-1 20,-1 17,-1 38,-2 62,-3 32,-86 78,-153 104,-187l0 0zm0 0l0 0 0 0z"/>
+  </g>
+  <path class="fil2" d="M389 11c-206,51 -286,372 -286,372 0,0 23,124 109,155 8,14 30,33 30,25 0,-4 2,-13 4,-23 16,-56 186,-634 392,-444 0,0 37,4 55,11 0,0 -70,-107 -219,-107 -26,0 -54,3 -85,11l0 0z"/>
+  <g>
+   <path id="path1280" class="fil1" d="M133 294c-21,52 -30,89 -30,89 0,0 23,124 109,155 8,14 30,33 30,25 0,-4 2,-13 4,-23 4,-12 14,-47 30,-94 -69,-56 -119,-119 -143,-152l0 0zm0 0l0 0 0 0z"/>
+  </g>
+  <path class="fil3" d="M0 437c-6,213 281,376 281,376 0,0 134,12 184,-70 15,-5 37,-12 31,-13 -5,-1 -21,-10 -33,-17 -81,-51 -543,-351 -313,-493 0,0 14,-34 25,-49 0,0 -168,53 -175,266z"/>
+  <g>
+   <path id="path1288" class="fil1" d="M496 730c-5,-1 -21,-10 -33,-17 -15,-9 -42,-27 -75,-50 -46,31 -112,69 -191,93 47,36 84,57 84,57 0,0 134,12 184,-70 15,-5 37,-12 31,-13l0 0zm0 0l0 0 0 0z"/>
+  </g>
+  <path class="fil4" d="M142 724c0,0 -30,-22 -42,-36 0,0 8,176 212,238 203,61 436,-174 436,-174 0,0 54,-147 -39,-211 0,0 -484,467 -567,183l0 0z"/>
+  <path id="path1296" class="fil1" d="M647 835c61,-42 101,-83 101,-83 0,0 54,-147 -39,-211 0,0 -35,34 -87,77 14,50 29,126 25,217z"/>
+  <path class="fil5" d="M594 888c0,0 -31,20 -49,26 0,0 168,54 297,-116 112,-148 20,-394 -5,-455 -57,-29 -138,-44 -218,-50 0,0 0,-1 0,-1 2,6 269,616 -25,596l0 0z"/>
+  <path id="path1314" class="fil1" d="M837 343c-57,-29 -138,-44 -218,-50 0,-1 0,-1 0,-1 0,0 14,34 33,85 55,6 150,19 211,37 -10,-32 -20,-57 -26,-71z"/>
+  <polygon class="fil6" points="448,104 448,104 "/>
+  <polygon class="fil6" points="594,888 594,888 "/>
+  <path class="fil6" d="M619 292c0,0 0,0 0,0 0,0 0,0 0,0l0 0z"/>
+  <polygon class="fil6" points="142,724 142,724 "/>
+  <polygon class="fil6" points="389,11 389,11 "/>
+ </g>
+</svg>
