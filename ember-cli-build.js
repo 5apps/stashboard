@@ -13,6 +13,13 @@ module.exports = function(defaults) {
     sourcemaps: {
       enabled: true,
       extensions: ['js']
+    },
+
+    'asset-cache': {
+      include: [
+        'assets/**/*',
+        'favicon.ico'
+      ]
     }
   });
 
