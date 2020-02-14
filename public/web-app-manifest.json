@@ -1,6 +1,6 @@
 {
   "name": "5apps Storage",
-  "short_name": "5apps Storage",
+  "short_name": "Storage",
   "description": "5apps Storage dashboard",
   "display": "standalone",
   "start_url": "/",
