@@ -1,7 +1,7 @@
 {
   "name": "5apps Storage",
   "short_name": "5apps Storage",
-  "description": "An app to manage your remoteStorage authorizations",
+  "description": "5apps Storage dashboard",
   "display": "standalone",
   "start_url": "/",
   "lang": "en",
