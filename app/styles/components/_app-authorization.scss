@@ -1,0 +1,196 @@
+section#apps {
+  .auth {
+    @include contentBox;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    h4 {
+      line-height: 2rem;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 1.28rem;
+      font-weight: normal;
+    }
+
+    p {
+      margin: 0;
+      line-height: 2rem;
+    }
+
+    > div {
+      grid-column-end: span 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 1rem 1.4rem;
+      text-align: left;
+      background-color: #fff;
+
+      &.icon {
+        height: 100px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        border-right: 1px solid $lightBodyContentBoxBorder;
+
+        svg {
+          max-width: 57px;
+          max-height: 57px;
+
+          path {
+            fill: $lightBodyContentBoxBorder;
+          }
+        }
+      }
+
+      &.app-name {
+        grid-column-end: span 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        z-index: 2;
+
+        a {
+          color: $bodyTextDiscreetColor;
+        }
+      }
+
+      &.metadata {
+        grid-column-end: span 3;
+        z-index: 1;
+
+        p {
+          &.created-at {
+            font-size: 0.9rem;
+            color: $bodyTextDiscreetColor;
+          }
+        }
+      }
+
+      &.actions {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        .button {
+          flex: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section#apps {
+    .auth {
+      > div {
+        &.icon {
+        }
+
+        &.app-name {
+          grid-column-end: span 3;
+        }
+
+        &.metadata {
+          grid-column-end: span 3;
+        }
+
+        &.actions {
+          grid-column-end: span 8;
+          border-top: 1px solid $lightBodyContentBoxBorder;
+
+          .button {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  section#apps {
+    .auth {
+      grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+      h4 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+
+      p {
+        line-height: 1.5rem;
+      }
+
+      > div {
+        grid-column-end: span 1;
+        padding: 0.6rem 1rem;
+
+        &.icon {
+          height: 64px;
+          border-right: none;
+
+          svg {
+            max-width: 32px;
+            max-height: 32px;
+          }
+        }
+
+        &.app-name {
+          grid-column-end: span 7;
+          padding-left: 0;
+
+          a {
+            font-size: 0.9rem;
+          }
+        }
+
+        &.metadata {
+          grid-column-end: span 8;
+          // height: 120px;
+          @include padding(0 null);
+          height: 0;
+          transform: translate3d(0, -4rem, 0);
+          opacity: 0;
+          border-top: 1px solid $lightBodyContentBoxBorder;
+          transition: all 0.2s ease-out;
+
+          &.open {
+            height: 70px;
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+          }
+        }
+
+        &.actions {
+          grid-column-end: span 8;
+          display: block;
+          padding: 0;
+          height: 0;
+          transform: translate3d(0, -2.7rem, 0);
+          border-top: 1px solid $lightBodyContentBoxBorder;
+          opacity: 0;
+          transition: all 0.2s ease-out;
+
+          .button {
+            display: block;
+            padding: 0.9rem 0;
+            border: none;
+            text-align: center;
+          }
+
+          &.open {
+            height: auto;
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
