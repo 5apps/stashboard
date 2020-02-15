@@ -7,8 +7,7 @@ module.exports = {
     'no-inline-styles': {
       allowDynamicStyles: true
     },
-    'no-action-modifiers': false,
-    'no-curly-component-invocation': false
+    'no-invalid-interactive': false
   },
 
   ignore: [

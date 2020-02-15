@@ -1,21 +1,20 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
+import { action } from '@ember/object'
 import config from 'storage-frontend/config/environment';
 
-export default Component.extend({
+export default class TopbarComponent extends Component {
 
-  tagName: '',
+  @service session;
+  @service currentUser;
 
-  session: service(),
-  currentUser: service(),
+  baseDomain = config.baseDomain;
+  frontpageUrl = 'https://'+config.baseDomain;
 
-  baseDomain: config.baseDomain,
-
-  actions: {
-    logout () {
-      this.set('session.userTriggeredSignout', true);
-      this.session.invalidate();
-    }
+  @action
+  logout () {
+    this.set('session.userTriggeredSignout', true);
+    this.session.invalidate();
   }
 
-});
+}
