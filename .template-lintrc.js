@@ -6,8 +6,7 @@ module.exports = {
   rules: {
     'no-inline-styles': {
       allowDynamicStyles: true
-    },
-    'no-invalid-interactive': false
+    }
   },
 
   ignore: [
