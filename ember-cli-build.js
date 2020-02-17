@@ -15,6 +15,17 @@ module.exports = function(defaults) {
       extensions: ['js']
     },
 
+    fingerprint: {
+      exclude: [
+        'icon.svg',
+        'icon_x64.png',
+        'icon_x128.png',
+        'icon_x192.png',
+        'icon_x256.png',
+        'icon_x512.png'
+      ]
+    },
+
     'asset-cache': {
       include: [
         'assets/**/*',
