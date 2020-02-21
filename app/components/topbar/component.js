@@ -13,7 +13,7 @@ export default class TopbarComponent extends Component {
 
   @action
   logout () {
-    this.set('session.userTriggeredSignout', true);
+    this.session.set('userTriggeredSignout', true);
     this.session.invalidate();
   }
 
