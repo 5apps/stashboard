@@ -1,5 +1,9 @@
-pipeline:
-  build:
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: build
     image: danlynn/ember-cli:3.0.0
     commands:
       - npm install
