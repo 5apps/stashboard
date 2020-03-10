@@ -3,3 +3,27 @@ section#apps {
     margin-bottom: 4rem;
   }
 }
+
+@media screen and (max-width: 900px) {
+  section#apps {
+    header {
+      margin-bottom: 3rem;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  section#apps {
+    header {
+      margin-bottom: 2rem;
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

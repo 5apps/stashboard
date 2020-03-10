@@ -11,7 +11,7 @@ section#apps {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      font-size: 1.28rem;
+      font-size: 1.3rem;
       font-weight: normal;
     }
 
@@ -26,7 +26,7 @@ section#apps {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      padding: 1rem 1.4rem;
+      padding: 1rem 1.4rem 1rem 0;
       text-align: left;
       background-color: #fff;
 
@@ -37,7 +37,6 @@ section#apps {
         align-items: center;
         justify-content: center;
         z-index: 2;
-        border-right: 1px solid $lightBodyContentBoxBorder;
 
         svg {
           max-width: 57px;
@@ -98,7 +97,7 @@ section#apps {
         }
 
         &.metadata {
-          grid-column-end: span 3;
+          grid-column-end: span 4;
         }
 
         &.actions {
@@ -119,7 +118,7 @@ section#apps {
       grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
       h4 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.5rem;
       }
 
@@ -136,8 +135,8 @@ section#apps {
           border-right: none;
 
           svg {
-            max-width: 32px;
-            max-height: 32px;
+            max-width: 38px;
+            max-height: 38px;
           }
         }
 
@@ -152,13 +151,16 @@ section#apps {
 
         &.metadata {
           grid-column-end: span 8;
-          // height: 120px;
           @include padding(0 null);
           height: 0;
           transform: translate3d(0, -4rem, 0);
           opacity: 0;
           border-top: 1px solid $lightBodyContentBoxBorder;
           transition: all 0.2s ease-out;
+
+          .directory {
+            font-size: 0.9rem;
+          }
 
           &.open {
             height: 70px;
@@ -179,6 +181,7 @@ section#apps {
 
           .button {
             display: block;
+            width: 100%;
             padding: 0.9rem 0;
             border: none;
             text-align: center;
