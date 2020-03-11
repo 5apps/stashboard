@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
 
 h2 {
   @include headlineFont(uppercase);
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: $shadedShinyBlue;
 }
 
@@ -60,10 +60,17 @@ section.content {
   transition: opacity 500ms ease;
 }
 
+@media screen and (max-width: 900px) {
+  #container-main {
+    padding: 4rem 1rem;
+  }
+}
+
 @import "components/ember-basic-dropdown";
 @import "components/topbar";
 @import "components/blurb";
 @import "components/buttons";
 @import "components/storage-permissions";
+@import "components/app-authorization";
 @import "views/welcome";
 @import "views/apps";
