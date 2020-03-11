@@ -78,7 +78,7 @@ section#apps {
         justify-content: center;
 
         .button {
-          flex: 0;
+          flex: none;
         }
       }
     }
@@ -103,9 +103,6 @@ section#apps {
         &.actions {
           grid-column-end: span 8;
           border-top: 1px solid $lightBodyContentBoxBorder;
-
-          .button {
-          }
         }
       }
     }
