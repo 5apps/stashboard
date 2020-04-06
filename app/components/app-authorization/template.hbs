@@ -1,6 +1,10 @@
 <div class="auth" {{on "click" (fn this.toggleOpenClass)}}>
   <div class="icon">
-    <Icons::BrandIconFlat />
+    {{#if @auth.iconUrl}}
+      <img src={{@auth.iconUrl}} alt="Icon" />
+    {{else}}
+      <Icons::BrandIconFlat />
+    {{/if}}
   </div>
   <div class="app-name">
     <h4>
