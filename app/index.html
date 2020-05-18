@@ -17,11 +17,29 @@
     {{content-for "head-footer"}}
   </head>
   <body class="storage">
-    {{content-for "body"}}
+    <noscript>
+      <p>
+        Hi there. This is where you would usually find your storage dashboard.
+      </p>
+      <p>
+        Unfortunately, it looks like JavaScript is turned off in your browser,
+        at least for this site. Please note that
+        <a href="https://remotestorage.io/">remoteStorage</a> apps are usually
+        written in JavaScript, so you will have to enable it for the vast
+        majority of compatible Web apps.
+      </p>
+      <p>
+        This front-end is published under an MIT license and you can find the
+        source code (as well as release builds) at
+        <a href="https://github.com/5apps/storage-frontend">https://github.com/5apps/storage-frontend</a>.
+        We appreciate any and all feedback via GitHub issues, and we will also
+        merge pull requests if we think they improve security or usability.
+      </p>
+    </noscript>
 
+    {{content-for "body"}}
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/storage-frontend.js"></script>
-
     {{content-for "body-footer"}}
   </body>
 </html>
