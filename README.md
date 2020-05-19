@@ -1,6 +1,28 @@
-# storage-frontend
+[![Build Status](https://drone.5apps.com/api/badges/5apps/stashboard/status.svg)](https://drone.5apps.com/5apps/stashboard)
 
-A dashboard for managing one's remoteStorage authorizations.
+# Stashboard
+
+Stashboard is a dashboard application for managing one's
+[remoteStorage](https://remotestorage.io/) account. It has been created by
+5apps as the front-end for [5apps Storage](https://5apps.com/storage).
+
+![Screenshot of a 5apps Storage dashboard](screenshots/connected-apps.png)
+
+## Storage providers & developers
+
+Feel free to use this for your own server implementation, and also to just
+re-use parts of the code (e.g. markup and styles).
+
+If you are genuinely interested in adopting this front-end for your server
+implementation, we would also be willing to help with making the app more
+customizable, so that you wouldn't have to run a custom fork per se. The GitHub
+issues are open for any and all requests.
+
+## Users
+
+For security reasons, it is not currently possible to log into your 5apps
+account when the app is not opened from `rs.5apps.com`. This may change in the
+future.
 
 ## Prerequisites
 
@@ -13,13 +35,13 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone git@github.com:5apps/storage-frontend.git` this repository
-* `cd storage-frontend`
+* `git clone git@github.com:5apps/stashboard.git` this repository
+* `cd stashboard`
 * `npm install`
 
 ## Running / Development
 
-* `ember serve`
+* `npm start`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
@@ -37,10 +59,3 @@ You will need the following things properly installed on your computer.
 ### Deploying
 
 * `npm run deploy:staging` or `npm run deploy:production`
-
-## FIXME Re-add Sentry support
-
-To create new Sentry releases and upload sourcemaps during deploy,
-you'll need to copy the `.env.example` file as `.env` and add your token
-to it. The token can be created at https://sentry.io/api/ with the scope
-"project:releases".
