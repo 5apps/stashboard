@@ -1,3 +1,5 @@
+[![Build Status](https://drone.5apps.com/api/badges/5apps/stashboard/status.svg)](https://drone.5apps.com/5apps/stashboard)
+
 # Stashboard
 
 Stashboard is a dashboard application for managing one's
