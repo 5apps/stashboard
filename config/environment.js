@@ -15,7 +15,7 @@ require('dotenv').config();
 module.exports = function(environment) {
 
   let ENV = {
-    modulePrefix: 'storage-frontend',
+    modulePrefix: 'stashboard',
     environment,
     rootURL: '/',
     locationType: 'auto',

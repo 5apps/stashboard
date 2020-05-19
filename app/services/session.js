@@ -9,10 +9,10 @@ export default SessionService.extend({
   userTriggeredSignout: false,
 
   authenticateWithImplicitGrant () {
-    const clientId = 'storage-frontend';
+    const clientId = 'stashboard';
     const redirectURI = `${window.location.origin}${config.rootURL}callback`;
     const responseType = 'token';
-    const scope = 'storage-frontend';
+    const scope = 'rs-account';
 
     const oauthURL = `https://${config.baseDomain}/oauth/authorize?`
       + `client_id=${clientId}`
