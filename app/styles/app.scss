@@ -52,12 +52,26 @@ section.content {
   flex: 1;
   max-width: 960px;
   text-align: center;
-
 }
 
 .fade-out {
   opacity: 0;
   transition: opacity 500ms ease;
+}
+
+noscript {
+  display: block;
+  width: 100%;
+  padding: 6rem 0;
+  text-align: center;
+
+  p {
+    width: 760px;
+    max-width: 90%;
+    margin: 2rem auto;
+    font-size: 1.2rem;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 900px) {
