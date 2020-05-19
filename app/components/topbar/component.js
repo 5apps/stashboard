@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object'
-import config from 'storage-frontend/config/environment';
+import config from 'stashboard/config/environment';
 
 export default class TopbarComponent extends Component {
 

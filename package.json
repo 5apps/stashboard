@@ -1,11 +1,11 @@
 {
-  "name": "storage-frontend",
+  "name": "stashboard",
   "version": "0.9.1",
   "private": true,
   "description": "5apps Storage Dashboard",
   "repository": "",
   "license": "MIT",
-  "author": "AppCache Ltd.",
+  "author": "5apps",
   "directories": {
     "doc": "doc",
     "test": "tests"
