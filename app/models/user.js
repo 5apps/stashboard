@@ -1,5 +1,6 @@
 import DS from 'ember-data';
 import { computed } from '@ember/object';
+import { isPresent } from '@ember/utils';
 
 const { Model, attr } = DS;
 
@@ -18,7 +19,7 @@ export default Model.extend({
   maximumStorageSize: attr(),
 
   storageHost: computed('storageAddress', function () {
-    return this.storageAddress.split('@')[1];
+    return isPresent(this.storageAddress) ? this.storageAddress.split('@')[1] : '';
   })
 
 });

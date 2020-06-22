@@ -14,4 +14,11 @@ module('Unit | Model | user', function(hooks) {
     assert.equal(model.get('storageHost'), 'podere-casarotta.it');
   });
 
+  test('storageHost when storageAddress is undefined', function(assert) {
+    let store = this.owner.lookup('service:store');
+    let model = run(() => store.createRecord('user', {}));
+
+    assert.equal(model.get('storageHost'), '');
+  });
+
 });
