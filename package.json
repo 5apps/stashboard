@@ -19,6 +19,7 @@
     "build:staging": "rm -rf release/* && DEPLOY_TARGET=staging ember build -prod --output-path release",
     "build:production": "rm -rf release/* && DEPLOY_TARGET=production ember build -prod --output-path release",
     "version": "npm run build:production && git add release/",
+    "postversion": "git push && git push --tags",
     "deploy:staging": "git push -f 5apps_staging $(git symbolic-ref --short HEAD):master",
     "deploy:production": "git push 5apps master"
   },
